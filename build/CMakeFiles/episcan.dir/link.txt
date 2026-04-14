@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/episcan.dir/src/main.cpp.o -o episcan 

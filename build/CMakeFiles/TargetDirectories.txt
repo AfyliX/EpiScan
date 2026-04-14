@@ -1,3 +1,0 @@
-/home/gabi/EPITECH/HUB/EpiScan/build/CMakeFiles/episcan.dir
-/home/gabi/EPITECH/HUB/EpiScan/build/CMakeFiles/edit_cache.dir
-/home/gabi/EPITECH/HUB/EpiScan/build/CMakeFiles/rebuild_cache.dir

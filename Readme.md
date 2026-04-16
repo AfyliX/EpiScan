@@ -15,13 +15,18 @@ L'objectif est de fournir un scanner pédagogique capable de repérer des signau
 
 ## Fonctionnalités prévues
 
-### Analyse de code
+### Analyse de code (MVP actuel)
 
-- Détection de fonctions dangereuses (`UnsafeFunctionDetector`)
-- Détection de patterns d'injection (`InjectionDetector`)
-- Détection de cryptographie faible (`CryptoDetector`)
-- Parsing de fichiers source (`CodeParser`)
-- Agrégation des résultats (`VulnDetector`)
+- Détection de patterns malveillants **haute confiance** (moins de faux positifs)
+- Exemples : `rm -rf /`, `mkfs.`, `dd if=/dev/zero of=/dev/...`, `curl|sh`, `wget|bash`, `nc -e`, fork bomb
+- Parsing récursif multi-langages sur fichiers texte orientés code/script
+- Les commentaires sont ignorés pendant l'analyse (ligne/bloc sur syntaxes courantes)
+- Une alerte est remontée seulement si le pattern apparaît dans un **contexte exécutable** (appel `system/exec/subprocess/...` ou script shell/PowerShell)
+- Export des détections en JSON (fichier, ligne, sévérité, extrait)
+- Scan multithread (utilise plusieurs cœurs CPU)
+- Suivi de progression dans le terminal (`[scan] X/Y | current: <chemin>`)
+- Interface SFML pour piloter le scan (target, report, all-system, résultats)
+- Exclusions bruit par défaut : chemins `playwright`, chemins du projet `EpiScan`, `~/.config/Code/User/History`, `workspaceStorage`, `Trash`, `snap/code`, `/tmp/episcan*`, et fichiers `report*.json`/`episcan*.json`
 
 ### Analyse réseau
 
@@ -62,9 +67,9 @@ docs/
 - Compilateur C++17 (g++ ou clang++)
 - Conan (optionnel, selon ton setup dépendances)
 
-## Build (base)
+## Build
 
-Le dépôt contient déjà la structure CMake. Quand les fichiers de build seront finalisés :
+Build recommandé via CMake :
 
 ```bash
 mkdir -p build
@@ -73,31 +78,49 @@ cmake ..
 cmake --build .
 ```
 
-## Lancer les tests
+Notes :
+- `episcan` = interface SFML (antivirus-like)
+- `episcan-cli` = exécutable terminal/script
+- si SFML n'est pas installé, `episcan` bascule automatiquement en mode CLI
+
+## Lancer un smoke test
 
 ```bash
-cd build
-ctest --output-on-failure
+./scripts/smoke_test.sh
 ```
 
-## Exemple d'utilisation (cible)
-
-Commande visée à terme (exemple) :
+## Exemple d'utilisation (MVP actuel)
 
 ```bash
-./episcan --target 127.0.0.1 --ports 1-1024 --code ./src --report ./report.json
+./build/episcan
+
+# mode CLI explicite
+./build/episcan-cli --code ./src --report ./build/report.json
+
+# format positionnel également supporté
+./build/episcan-cli ./src --report ./build/report.json
+
+# scanner tout le PC (Linux)
+./build/episcan-cli --all-system --report ./build/full_system_report.json
 ```
+
+Notes pour `--all-system` :
+- le scan peut être long selon la machine
+- certains chemins système spéciaux sont ignorés (`/proc`, `/sys`, `/dev`, `/run`)
+- selon les permissions, il peut être utile d'exécuter avec des droits élevés
 
 ## Limites
 
 - Détection basée sur signatures/patterns : possibles faux positifs/faux négatifs
 - Couverture partielle des vulnérabilités avancées
 - Ne remplace pas un EDR/antivirus ni un audit sécurité complet
+- N'analyse pas les binaires exécutables dans ce MVP (uniquement les fichiers texte)
+- Le mode haute confiance peut rater certains cas ambigus pour éviter le bruit excessif
 
 ## Roadmap suggérée
 
-- [ ] Finaliser le binaire CLI principal
-- [ ] Implémenter les modules `src/*` et exposer les options de scan
+- [x] Finaliser un binaire CLI principal MVP
+- [ ] Extraire la logique de détection vers `src/analyzer/*`
 - [ ] Ajouter format de rapport JSON/HTML
 - [ ] Étendre les tests unitaires et d'intégration
 - [ ] Ajouter pipeline CI (build + tests)

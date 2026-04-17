@@ -6,6 +6,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
 add_library(episcan_core
 	src/app/ScannerEngine.cpp
 )
@@ -44,5 +46,20 @@ else()
 		src/cli_main.cpp
 	)
 	target_link_libraries(episcan PRIVATE episcan_core)
+endif()
+
+# ── Network traffic analyser (requires libpcap) ───────────────────────────────
+find_package(LibPCAP QUIET)
+
+if(LibPCAP_FOUND)
+	add_executable(episcan-net
+		src/net_main.cpp
+		src/network/TrafficAnalyzer.cpp
+	)
+	target_include_directories(episcan-net PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+	target_link_libraries(episcan-net PRIVATE LibPCAP::LibPCAP)
+	message(STATUS "libpcap found — episcan-net will be built")
+else()
+	message(WARNING "libpcap not found: episcan-net will NOT be built. Install libpcap-dev to enable it.")
 endif()
 

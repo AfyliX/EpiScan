@@ -28,12 +28,28 @@ L'objectif est de fournir un scanner pédagogique capable de repérer des signau
 - Interface SFML pour piloter le scan (target, report, all-system, résultats)
 - Exclusions bruit par défaut : chemins `playwright`, chemins du projet `EpiScan`, `~/.config/Code/User/History`, `workspaceStorage`, `Trash`, `snap/code`, `/tmp/episcan*`, et fichiers `report*.json`/`episcan*.json`
 
-### Analyse réseau
+### Analyse réseau (implémenté — branche `network`)
 
-- Scan de ports (`PortScanner`)
-- Détection de services (`ServiceDetector`)
-- Récupération de bannières (`BannerGrabber`)
-- Corrélation vulnérabilités/service (`NetworkvulAnalyzer`)
+`episcan-net` capture le trafic réseau en temps réel (via **libpcap**) ou analyse un fichier `.pcap` existant et applique des règles de détection sur chaque paquet.
+
+**Détections implémentées :**
+
+| Règle | Sévérité | Description |
+|---|---|---|
+| Log4Shell CVE-2021-44228 (ldap/rmi/dns + variante obfusquée) | critical | `${jndi:…}` dans tout payload HTTP |
+| ShellShock CVE-2014-6271 | critical | `() { :;};` dans les headers HTTP/CGI |
+| Reverse shell bash, python, perl, ruby, nc, socat, php | high | Patterns string dans payload TCP |
+| PHP webshell (`eval`/`assert` + `base64_decode`) | high | Injection de code côté serveur |
+| Mimikatz (`sekurlsa`, `lsadump`, `kerberos::golden`) | critical | Dump de credentials en clair dans le trafic |
+| Cobalt Strike beacon | critical | Chaîne `cobaltstrike` en clair |
+| Injection SQL (`UNION SELECT`, `DROP TABLE`) | medium | Probes dans payload HTTP |
+| Injection de commandes (`curl\|sh`, `wget\|sh`) | high | Payload HTTP |
+| Credentials HTTP en clair (`password=` sur port 80) | medium | Formulaire non chiffré |
+| Port scan | medium | Source SYN vers ≥ 20 ports distincts |
+| DNS tunnelling | medium | Label DNS > 52 caractères (heuristique) |
+| Trafic sur ports C2/RAT connus (4444, 1234, 6666…) | medium | Connexion TCP suspecte |
+
+**Rapport JSON** généré avec : ruleId, sévérité, src/dst IP:port, protocole, extrait de payload, timestamp.
 
 ### Core
 
@@ -48,14 +64,24 @@ include/
 	analyzer/
 	core/
 	network/
+		TrafficAnalyzer.hpp   ← API analyse trafic
 src/
 	analyzer/
 	core/
 	network/
+		TrafficAnalyzer.cpp   ← implémentation libpcap
+	cli_main.cpp              ← episcan-cli
+	gui_main.cpp              ← episcan (SFML)
+	net_main.cpp              ← episcan-net
 data/
 	common_ports.json
 	cve_database.json
 	config_example.json
+cmake/
+	FindLibPCAP.cmake         ← détection libpcap
+scripts/
+	smoke_test.sh
+	gen_test_pcap.py          ← générateur de pcap de test
 tests/
 docs/
 ```
@@ -65,6 +91,8 @@ docs/
 - Linux
 - CMake (>= 3.16 recommandé)
 - Compilateur C++17 (g++ ou clang++)
+- **libpcap-dev** (pour `episcan-net`) : `sudo apt install libpcap-dev`
+- SFML 2.5 (optionnel, pour l'interface graphique) : `sudo apt install libsfml-dev`
 - Conan (optionnel, selon ton setup dépendances)
 
 ## Build
@@ -81,7 +109,9 @@ cmake --build .
 Notes :
 - `episcan` = interface SFML (antivirus-like)
 - `episcan-cli` = exécutable terminal/script
+- `episcan-net` = analyse de trafic réseau (nécessite libpcap-dev)
 - si SFML n'est pas installé, `episcan` bascule automatiquement en mode CLI
+- si libpcap n'est pas installé, `episcan-net` n'est pas compilé (avertissement CMake)
 
 ## Lancer un smoke test
 
@@ -109,6 +139,42 @@ Notes pour `--all-system` :
 - certains chemins système spéciaux sont ignorés (`/proc`, `/sys`, `/dev`, `/run`)
 - selon les permissions, il peut être utile d'exécuter avec des droits élevés
 
+## Utilisation — Analyse de trafic réseau (`episcan-net`)
+
+### Live capture (nécessite root ou CAP_NET_RAW)
+
+```bash
+# Capturer 60 secondes sur wlo1
+sudo /chemin/vers/build/episcan-net --iface wlo1 --duration 60 --report traffic.json
+
+# Ou donner la capability pour éviter sudo à chaque fois
+sudo setcap cap_net_raw,cap_net_admin=eip ./build/episcan-net
+./build/episcan-net --iface wlo1 --duration 60 --report traffic.json
+```
+
+### Analyse d'un fichier .pcap (sans privilèges)
+
+```bash
+./build/episcan-net --pcap capture.pcap --report results.json
+```
+
+### Lister les interfaces disponibles
+
+```bash
+./build/episcan-net --list-ifaces
+```
+
+### Générer un pcap de test (toutes les règles)
+
+```bash
+# Génère un fichier pcap avec 27 attaques simulées
+python3 scripts/gen_test_pcap.py /tmp/test_attacks.pcap
+
+# Analyser le résultat
+./build/episcan-net --pcap /tmp/test_attacks.pcap --report /tmp/test_report.json
+# → 34 findings : Log4Shell, ShellShock, reverse shells, Mimikatz, port scan...
+```
+
 ## Limites
 
 - Détection basée sur signatures/patterns : possibles faux positifs/faux négatifs
@@ -120,7 +186,12 @@ Notes pour `--all-system` :
 ## Roadmap suggérée
 
 - [x] Finaliser un binaire CLI principal MVP
+- [x] Analyse de trafic réseau temps réel avec libpcap (`episcan-net`)
+- [x] Détection Log4Shell, ShellShock, reverse shells, Mimikatz, Cobalt Strike…
+- [x] Générateur de pcap de test (`scripts/gen_test_pcap.py`)
 - [ ] Extraire la logique de détection vers `src/analyzer/*`
+- [ ] Implémenter les modules Core (Vulnerability, Report, Config, Severity)
+- [ ] PortScanner, ServiceDetector, BannerGrabber (module réseau actif)
 - [ ] Ajouter format de rapport JSON/HTML
 - [ ] Étendre les tests unitaires et d'intégration
 - [ ] Ajouter pipeline CI (build + tests)

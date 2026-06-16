@@ -1,0 +1,84 @@
+{
+  "remediations": {
+    "unsafe-gets": {
+      "title": "Remplacer gets() par fgets()",
+      "description": "gets() ne limite pas la taille de l'entrée — débordement garanti.",
+      "fix": "fgets(buf, sizeof(buf), stdin);",
+      "cwe": "CWE-120",
+      "owasp": "A3:2021 – Injection",
+      "links": ["https://cwe.mitre.org/data/definitions/120.html"]
+    },
+    "unsafe-strcpy": {
+      "title": "Remplacer strcpy() par strncpy() ou std::string",
+      "description": "strcpy() copie sans vérifier la taille du buffer destination.",
+      "fix": "strncpy(dst, src, sizeof(dst) - 1); dst[sizeof(dst)-1] = '\\0';",
+      "cwe": "CWE-120",
+      "links": ["https://cwe.mitre.org/data/definitions/120.html"]
+    },
+    "unsafe-sprintf": {
+      "title": "Remplacer sprintf() par snprintf()",
+      "description": "sprintf() ne limite pas la taille — utiliser snprintf avec la taille du buffer.",
+      "fix": "snprintf(buf, sizeof(buf), \"%s\", input);",
+      "cwe": "CWE-120",
+      "links": ["https://cwe.mitre.org/data/definitions/120.html"]
+    },
+    "unsafe-system": {
+      "title": "Éviter system() — utiliser execve()",
+      "description": "system() invoque un shell, permettant l'injection de commandes.",
+      "fix": "char *const argv[] = { \"/bin/ls\", NULL }; execve(argv[0], argv, NULL);",
+      "cwe": "CWE-78",
+      "owasp": "A3:2021 – Injection",
+      "links": ["https://cwe.mitre.org/data/definitions/78.html"]
+    },
+    "sql-concat-string": {
+      "title": "Utiliser des requêtes préparées SQL",
+      "description": "La concaténation SQL avec des entrées utilisateur permet l'injection SQL.",
+      "fix": "PreparedStatement *stmt = conn->prepareStatement(\"SELECT * FROM users WHERE id = ?\"); stmt->setString(1, userId);",
+      "cwe": "CWE-89",
+      "owasp": "A3:2021 – Injection",
+      "links": [
+        "https://cwe.mitre.org/data/definitions/89.html",
+        "https://owasp.org/www-community/attacks/SQL_Injection"
+      ]
+    },
+    "hardcoded-secret": {
+      "title": "Ne pas hardcoder les secrets dans le code",
+      "description": "Les secrets dans le code source sont exposés dans les dépôts git et les logs.",
+      "fix": "const char* password = getenv(\"DB_PASSWORD\");",
+      "cwe": "CWE-798",
+      "owasp": "A7:2021 – Identification and Authentication Failures",
+      "links": [
+        "https://cwe.mitre.org/data/definitions/798.html",
+        "https://12factor.net/config"
+      ]
+    },
+    "weak-md5": {
+      "title": "Remplacer MD5 par SHA-256",
+      "description": "MD5 est cryptographiquement cassé depuis 2004 (collisions pratiques).",
+      "fix": "EVP_MD_CTX *ctx = EVP_MD_CTX_new(); EVP_DigestInit_ex(ctx, EVP_sha256(), NULL);",
+      "cwe": "CWE-327",
+      "links": ["https://cwe.mitre.org/data/definitions/327.html"]
+    },
+    "weak-sha1": {
+      "title": "Remplacer SHA-1 par SHA-256",
+      "description": "SHA-1 a une collision démontrée (SHAttered, 2017). Ne plus utiliser.",
+      "fix": "EVP_DigestInit_ex(ctx, EVP_sha256(), NULL);",
+      "cwe": "CWE-327",
+      "links": ["https://shattered.io"]
+    },
+    "network-telnet": {
+      "title": "Remplacer Telnet par SSH",
+      "description": "Telnet transmet tout en clair, y compris les identifiants.",
+      "fix": "Désinstaller telnetd; installer openssh-server.",
+      "cwe": "CWE-319",
+      "links": ["https://cwe.mitre.org/data/definitions/319.html"]
+    },
+    "network-redis-exposed": {
+      "title": "Sécuriser Redis",
+      "description": "Redis sans authentification est accessible par n'importe qui sur le réseau.",
+      "fix": "bind 127.0.0.1\\nrequirepass VotreMotDePasseComplexe",
+      "cwe": "CWE-306",
+      "links": ["https://redis.io/topics/security"]
+    }
+  }
+}

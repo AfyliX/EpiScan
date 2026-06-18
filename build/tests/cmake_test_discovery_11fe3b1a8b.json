@@ -1,0 +1,37 @@
+{
+  "tests": 5,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "VulnDetector",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "DetectsMallocWithoutCheck",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_vuln_detector.cpp",
+          "line": 19
+        },
+        {
+          "name": "DetectsArrayNoChecks",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_vuln_detector.cpp",
+          "line": 30
+        },
+        {
+          "name": "DetectsMemcpy",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_vuln_detector.cpp",
+          "line": 41
+        },
+        {
+          "name": "SkipsNonCppFiles",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_vuln_detector.cpp",
+          "line": 51
+        },
+        {
+          "name": "CleanCodeNoFindings",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_vuln_detector.cpp",
+          "line": 61
+        }
+      ]
+    }
+  ]
+}

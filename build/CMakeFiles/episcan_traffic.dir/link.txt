@@ -1,0 +1,2 @@
+/usr/bin/ar qc libepiscan_traffic.a CMakeFiles/episcan_traffic.dir/src/network/TrafficAnalyzer.cpp.o
+/usr/bin/ranlib libepiscan_traffic.a

@@ -1,5 +1,7 @@
 #include "network/TrafficAnalyzer.hpp"
 
+#include <nlohmann/json.hpp>
+
 #include <pcap.h>
 #include <arpa/inet.h>
 #include <net/ethernet.h>
@@ -559,31 +561,6 @@ std::vector<PacketFinding> analyzeTraffic(const TrafficScanOptions &opts,
 
 // ── JSON report ───────────────────────────────────────────────────────────────
 
-static std::string jsonEscape(const std::string &s)
-{
-    std::string out;
-    out.reserve(s.size() + 4);
-    for (const char c : s) {
-        switch (c) {
-            case '"':  out += "\\\""; break;
-            case '\\': out += "\\\\"; break;
-            case '\n': out += "\\n";  break;
-            case '\r': out += "\\r";  break;
-            case '\t': out += "\\t";  break;
-            default:
-                if (static_cast<unsigned char>(c) < 0x20) {
-                    char buf[8];
-                    std::snprintf(buf, sizeof(buf), "\\u%04x",
-                                  static_cast<unsigned char>(c));
-                    out += buf;
-                } else {
-                    out.push_back(c);
-                }
-        }
-    }
-    return out;
-}
-
 void writeTrafficReport(const std::filesystem::path      &path,
                         const std::vector<PacketFinding> &findings)
 {
@@ -592,25 +569,23 @@ void writeTrafficReport(const std::filesystem::path      &path,
         throw std::runtime_error("Cannot open report file: " + path.string());
     }
 
-    out << "{\n  \"findings\": [\n";
-    for (std::size_t i = 0; i < findings.size(); ++i) {
-        const auto &f = findings[i];
-        out << "    {\n"
-            << "      \"ruleId\": \""        << jsonEscape(f.ruleId)          << "\",\n"
-            << "      \"severity\": \""      << jsonEscape(f.severity)        << "\",\n"
-            << "      \"description\": \""   << jsonEscape(f.description)     << "\",\n"
-            << "      \"src\": \""           << jsonEscape(f.srcIp)           << ":"
-                                             << f.srcPort                     << "\",\n"
-            << "      \"dst\": \""           << jsonEscape(f.dstIp)           << ":"
-                                             << f.dstPort                     << "\",\n"
-            << "      \"protocol\": \""      << jsonEscape(f.protocol)        << "\",\n"
-            << "      \"payloadSnippet\": \"" << jsonEscape(f.payloadSnippet) << "\",\n"
-            << "      \"timestamp\": "       << f.timestamp                   << "\n"
-            << "    }" << (i + 1 < findings.size() ? "," : "") << "\n";
+    nlohmann::json j;
+    j["findings"] = nlohmann::json::array();
+    for (const auto &f : findings) {
+        j["findings"].push_back({
+            {"ruleId", f.ruleId},
+            {"severity", f.severity},
+            {"description", f.description},
+            {"src", f.srcIp + ":" + std::to_string(f.srcPort)},
+            {"dst", f.dstIp + ":" + std::to_string(f.dstPort)},
+            {"protocol", f.protocol},
+            {"payloadSnippet", f.payloadSnippet},
+            {"timestamp", f.timestamp},
+        });
     }
-    out << "  ],\n"
-        << "  \"totalFindings\": " << findings.size() << "\n"
-        << "}\n";
+    j["totalFindings"] = findings.size();
+
+    out << j.dump(2) << "\n";
 }
 
 // ── Interface enumeration ─────────────────────────────────────────────────────

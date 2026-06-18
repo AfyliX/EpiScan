@@ -1,0 +1,5 @@
+if(EXISTS "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner[1]_tests.cmake")
+  include("/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner[1]_tests.cmake")
+else()
+  add_test(test_port_scanner_NOT_BUILT test_port_scanner_NOT_BUILT)
+endif()

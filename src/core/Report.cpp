@@ -1,6 +1,8 @@
 #include "core/Report.hpp"
 #include "core/Severity.hpp"
 
+#include <nlohmann/json.hpp>
+
 #include <algorithm>
 #include <chrono>
 #include <ctime>
@@ -25,23 +27,6 @@ std::string nowIso8601()
     std::ostringstream ss;
     ss << std::put_time(&utc, "%Y-%m-%dT%H:%M:%SZ");
     return ss.str();
-}
-
-std::string jsonEsc(const std::string &s)
-{
-    std::string out;
-    out.reserve(s.size());
-    for (char c : s) {
-        switch (c) {
-        case '"':  out += "\\\""; break;
-        case '\\': out += "\\\\"; break;
-        case '\n': out += "\\n";  break;
-        case '\r': out += "\\r";  break;
-        case '\t': out += "\\t";  break;
-        default:   out.push_back(c); break;
-        }
-    }
-    return out;
 }
 
 std::string htmlEsc(const std::string &s)
@@ -133,41 +118,38 @@ void writeReportJson(const std::filesystem::path &path, const Report &report)
     std::ofstream out(path);
     if (!out) throw std::runtime_error("Cannot open report: " + path.string());
 
-    out << "{\n"
-        << "  \"scan_date\": \""   << jsonEsc(report.scanDate) << "\",\n"
-        << "  \"target\": \""      << jsonEsc(report.target)   << "\",\n"
-        << "  \"summary\": {\n"
-        << "    \"critical\": "    << report.summary.critical   << ",\n"
-        << "    \"high\": "        << report.summary.high       << ",\n"
-        << "    \"medium\": "      << report.summary.medium     << ",\n"
-        << "    \"low\": "         << report.summary.low        << ",\n"
-        << "    \"total\": "       << report.summary.total      << ",\n"
-        << "    \"security_score\": " << std::fixed << std::setprecision(1)
-                                      << report.summary.securityScore << ",\n"
-        << "    \"scanned_files\": "  << report.summary.scannedFiles  << ",\n"
-        << "    \"scanned_ports\": "  << report.summary.scannedPorts  << ",\n"
-        << "    \"scan_duration_sec\": " << std::setprecision(3)
-                                         << report.summary.scanDurationSec << "\n"
-        << "  },\n"
-        << "  \"findings\": [\n";
+    nlohmann::json j;
+    j["scan_date"] = report.scanDate;
+    j["target"]    = report.target;
+    j["summary"]   = {
+        {"critical", report.summary.critical},
+        {"high", report.summary.high},
+        {"medium", report.summary.medium},
+        {"low", report.summary.low},
+        {"total", report.summary.total},
+        {"security_score", report.summary.securityScore},
+        {"scanned_files", report.summary.scannedFiles},
+        {"scanned_ports", report.summary.scannedPorts},
+        {"scan_duration_sec", report.summary.scanDurationSec},
+    };
 
-    for (std::size_t i = 0; i < report.findings.size(); ++i) {
-        const auto &v    = report.findings[i];
-        const bool  last = (i + 1 == report.findings.size());
-        out << "    {\n"
-            << "      \"id\": \""          << jsonEsc(v.id)                      << "\",\n"
-            << "      \"file\": \""         << jsonEsc(v.file.string())           << "\",\n"
-            << "      \"line\": "           << v.line                             << ",\n"
-            << "      \"severity\": \""     << jsonEsc(severityToString(v.severity)) << "\",\n"
-            << "      \"cvss\": "           << std::setprecision(1) << v.cvssScore << ",\n"
-            << "      \"category\": \""     << jsonEsc(v.category)                << "\",\n"
-            << "      \"message\": \""      << jsonEsc(v.message)                 << "\",\n"
-            << "      \"cwe\": \""          << jsonEsc(v.cwe)                     << "\",\n"
-            << "      \"remediation\": \""  << jsonEsc(v.remediation)             << "\",\n"
-            << "      \"code\": \""         << jsonEsc(v.code)                    << "\"\n"
-            << "    }" << (last ? "\n" : ",\n");
+    j["findings"] = nlohmann::json::array();
+    for (const auto &v : report.findings) {
+        j["findings"].push_back({
+            {"id", v.id},
+            {"file", v.file.string()},
+            {"line", v.line},
+            {"severity", severityToString(v.severity)},
+            {"cvss", v.cvssScore},
+            {"category", v.category},
+            {"message", v.message},
+            {"cwe", v.cwe},
+            {"remediation", v.remediation},
+            {"code", v.code},
+        });
     }
-    out << "  ]\n}\n";
+
+    out << j.dump(2) << "\n";
 }
 
 // ── HTML (#81) ────────────────────────────────────────────────────────────────
@@ -295,6 +277,39 @@ void writeReportMarkdown(const std::filesystem::path &path, const Report &report
     }
 
     out << "---\n*Généré par EpiScan*\n";
+}
+
+// ── Format auto-selection + scan-to-scan delta ──────────────────────────────
+
+void writeReportAuto(const std::filesystem::path &path, const Report &report)
+{
+    auto ext = path.extension().string();
+    std::transform(ext.begin(), ext.end(), ext.begin(), [](unsigned char c) { return std::tolower(c); });
+
+    if (ext == ".html" || ext == ".htm") {
+        writeReportHtml(path, report);
+    } else if (ext == ".md" || ext == ".markdown") {
+        writeReportMarkdown(path, report);
+    } else {
+        writeReportJson(path, report);
+    }
+}
+
+void applyPreviousScanDelta(Report &report, const std::filesystem::path &previousReportPath)
+{
+    std::ifstream in(previousReportPath);
+    if (!in) {
+        return;
+    }
+
+    try {
+        const nlohmann::json previous = nlohmann::json::parse(in);
+        const long previousTotal = previous.at("summary").at("total").get<long>();
+        report.summary.hasPreviousScan = true;
+        report.summary.totalDelta = static_cast<long>(report.summary.total) - previousTotal;
+    } catch (const nlohmann::json::exception &) {
+        // Previous report missing, unreadable, or not our JSON schema (e.g. HTML/MD) — no delta.
+    }
 }
 
 } // namespace episcan

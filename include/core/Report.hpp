@@ -18,6 +18,8 @@ struct ReportSummary {
     std::size_t scannedFiles  = 0;
     std::size_t scannedPorts  = 0;
     double      scanDurationSec = 0.0;
+    bool        hasPreviousScan = false;
+    long        totalDelta      = 0; // total - previous scan's total (only valid if hasPreviousScan)
 };
 
 struct Report {
@@ -36,5 +38,13 @@ Report buildReport(const std::string              &target,
 void writeReportJson(const std::filesystem::path &path, const Report &report);
 void writeReportHtml(const std::filesystem::path &path, const Report &report);
 void writeReportMarkdown(const std::filesystem::path &path, const Report &report);
+
+// Picks JSON/HTML/Markdown based on the path's extension (.html/.htm, .md/.markdown,
+// anything else falls back to JSON).
+void writeReportAuto(const std::filesystem::path &path, const Report &report);
+
+// If a previous JSON report exists at previousReportPath, reads its summary "total"
+// and fills report.summary.hasPreviousScan / totalDelta. No-op if not found/unreadable.
+void applyPreviousScanDelta(Report &report, const std::filesystem::path &previousReportPath);
 
 } // namespace episcan

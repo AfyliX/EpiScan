@@ -1,0 +1,17 @@
+{
+  "scan_date": "2026-06-18T14:29:19Z",
+  "target": "127.0.0.1",
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0,
+    "total": 0,
+    "security_score": 100.0,
+    "scanned_files": 0,
+    "scanned_ports": 1024,
+    "scan_duration_sec": 0.003
+  },
+  "findings": [
+  ]
+}

@@ -1,0 +1,5 @@
+if(EXISTS "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser[1]_tests.cmake")
+  include("/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser[1]_tests.cmake")
+else()
+  add_test(test_code_parser_NOT_BUILT test_code_parser_NOT_BUILT)
+endif()

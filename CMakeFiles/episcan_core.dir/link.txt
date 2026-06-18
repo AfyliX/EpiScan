@@ -1,2 +1,0 @@
-/usr/bin/ar qc libepiscan_core.a CMakeFiles/episcan_core.dir/src/app/ScannerEngine.cpp.o
-/usr/bin/ranlib libepiscan_core.a

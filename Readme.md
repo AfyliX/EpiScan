@@ -112,6 +112,23 @@ Notes :
 - `episcan-net` = analyse de trafic réseau (nécessite libpcap-dev)
 - si SFML n'est pas installé, `episcan` bascule automatiquement en mode CLI
 - si libpcap n'est pas installé, `episcan-net` n'est pas compilé (avertissement CMake)
+- Boost (Boost.Asio, pour le scanner de ports) est résolu via `find_package(Boost)` —
+  installer le paquet système (`sudo pacman -S boost` / `sudo apt install libboost-dev`)
+
+### Build via Conan (optionnel)
+
+Par défaut, GTest/CLI11/nlohmann_json sont récupérés automatiquement via
+`FetchContent` (rien à installer). Si tu préfères les résoudre via Conan :
+
+```bash
+pip install conan
+conan install . --output-folder=build --build=missing
+cmake -B build -DEPISCAN_USE_CONAN_DEPS=ON -DCMAKE_TOOLCHAIN_FILE=build/conan_toolchain.cmake
+cmake --build build
+```
+
+Boost et OpenSSL n'ont pas besoin de ce flag : `find_package()` les retrouve
+aussi bien via Conan que via les paquets système.
 
 ## Lancer un smoke test
 

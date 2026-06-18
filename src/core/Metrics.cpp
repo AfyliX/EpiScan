@@ -67,6 +67,13 @@ void printMetrics(const ScanMetrics &m)
             std::cout << "    " << std::setw(14) << std::left << cat << " : " << cnt << "\n";
         }
     }
+
+    if (!m.durationByModule.empty()) {
+        std::cout << "\n  Temps de scan par module:\n";
+        for (const auto &[module, seconds] : m.durationByModule) {
+            std::cout << "    " << std::setw(10) << std::left << module << " : " << seconds << "s\n";
+        }
+    }
     std::cout << "══════════════════════════════════════════════════════\n";
 }
 

@@ -1,63 +1,60 @@
 #include "network/PortScanner.hpp"
 
-#include <arpa/inet.h>
+#include <boost/asio.hpp>
+
 #include <atomic>
-#include <fcntl.h>
-#include <mutex>
-#include <netdb.h>
-#include <netinet/in.h>
+#include <chrono>
 #include <string>
-#include <sys/socket.h>
-#include <sys/time.h>
 #include <thread>
-#include <unistd.h>
 #include <vector>
 
 namespace episcan {
 namespace network {
 namespace {
 
+namespace asio = boost::asio;
+
+// One fresh io_context per attempt keeps the worker-thread-pool structure
+// below unchanged (each thread blocks on a single port at a time) while the
+// connect+timeout itself is done through Boost.Asio (#71) instead of raw
+// POSIX sockets. The resolver has no protocol hint, so it returns both IPv4
+// and IPv6 endpoints when available (dual-stack, like getaddrinfo(AF_UNSPEC)
+// did) and async_connect tries them in order until one succeeds (#75).
 bool tryConnect(const std::string &host, uint16_t port, int timeoutMs)
 {
-    addrinfo hints = {};
-    hints.ai_family   = AF_UNSPEC;
-    hints.ai_socktype = SOCK_STREAM;
+    asio::io_context io;
 
-    addrinfo *res = nullptr;
-    const std::string portStr = std::to_string(port);
-    if (getaddrinfo(host.c_str(), portStr.c_str(), &hints, &res) != 0 || !res) {
+    asio::ip::tcp::resolver resolver(io);
+    boost::system::error_code resolveEc;
+    const auto endpoints = resolver.resolve(host, std::to_string(port), resolveEc);
+    if (resolveEc || endpoints.empty()) {
         return false;
     }
 
-    int fd = ::socket(res->ai_family, SOCK_STREAM, 0);
-    if (fd < 0) { freeaddrinfo(res); return false; }
+    asio::ip::tcp::socket socket(io);
+    asio::steady_timer    timer(io);
 
-    // Set non-blocking
-    int flags = fcntl(fd, F_GETFL, 0);
-    fcntl(fd, F_SETFL, flags | O_NONBLOCK);
+    bool                       connectDone = false;
+    boost::system::error_code connectEc   = asio::error::would_block;
 
-    ::connect(fd, res->ai_addr, res->ai_addrlen);
-    freeaddrinfo(res);
+    timer.expires_after(std::chrono::milliseconds(timeoutMs));
+    timer.async_wait([&](const boost::system::error_code &ec) {
+        if (!ec) {
+            boost::system::error_code ignore;
+            socket.cancel(ignore);
+        }
+    });
 
-    fd_set wset;
-    FD_ZERO(&wset);
-    FD_SET(fd, &wset);
+    asio::async_connect(socket, endpoints,
+        [&](const boost::system::error_code &ec, const asio::ip::tcp::endpoint &) {
+            connectEc   = ec;
+            connectDone = true;
+            timer.cancel();
+        });
 
-    struct timeval tv;
-    tv.tv_sec  = timeoutMs / 1000;
-    tv.tv_usec = (timeoutMs % 1000) * 1000;
+    io.run();
 
-    const int sel = select(fd + 1, nullptr, &wset, nullptr, &tv);
-    bool open = false;
-    if (sel > 0) {
-        int err = 0;
-        socklen_t len = sizeof(err);
-        getsockopt(fd, SOL_SOCKET, SO_ERROR, &err, &len);
-        open = (err == 0);
-    }
-
-    ::close(fd);
-    return open;
+    return connectDone && !connectEc;
 }
 
 std::size_t defaultThreadCount(const ScanConfig &cfg)

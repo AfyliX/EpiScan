@@ -1,0 +1,5 @@
+if(EXISTS "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration[1]_tests.cmake")
+  include("/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration[1]_tests.cmake")
+else()
+  add_test(test_integration_NOT_BUILT test_integration_NOT_BUILT)
+endif()

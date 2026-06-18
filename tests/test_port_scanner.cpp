@@ -42,3 +42,17 @@ TEST(PortScanner, ScanLocalhostPort22)
     // Just verify no crash and result is sensible
     EXPECT_LE(results.size(), 1u);
 }
+
+TEST(PortScanner, ScanIPv6LoopbackDoesNotCrash)
+{
+    // getaddrinfo(AF_UNSPEC) resolves "::1" to an IPv6 sockaddr, exercising the
+    // IPv6 path of tryConnect() (#75). No CIDR enumeration: an IPv6 prefix has
+    // up to 2^96 addresses, so subnet scanning isn't implemented — only single
+    // IPv6 hosts are supported, same as a literal IPv4 host.
+    const auto results = episcan::network::scanPorts("::1", {1, 20}, {500, 4, false});
+    for (const auto &r : results) {
+        EXPECT_EQ(r.state, episcan::network::PortState::Open);
+        EXPECT_GE(r.port, static_cast<uint16_t>(1));
+        EXPECT_LE(r.port, static_cast<uint16_t>(20));
+    }
+}

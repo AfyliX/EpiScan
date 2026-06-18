@@ -1,4 +1,6 @@
 #include "app/ScannerEngine.hpp"
+#include "analyzer/CodeParser.hpp"
+#include "core/Severity.hpp"
 
 #include <algorithm>
 #include <atomic>
@@ -21,6 +23,8 @@ struct DetectionRule {
     std::vector<std::string> requiredTokens;
     std::string severity;
     std::string message;
+    std::string cwe;
+    std::string remediation;
 };
 
 struct CommentState {
@@ -194,17 +198,28 @@ bool isExecutableDangerContext(const std::filesystem::path &filePath, const std:
 std::vector<DetectionRule> defaultRules()
 {
     return {
-        {"rm-rf-root", {"rm -rf"}, "critical", "Potential destructive wipe command"},
-        {"disk-format", {"mkfs."}, "critical", "Potential disk format command"},
-        {"raw-disk-overwrite", {"dd if=/dev/zero", "of=/dev/"}, "critical", "Potential destructive raw disk overwrite"},
-        {"curl-pipe-sh", {"curl", "| sh"}, "critical", "Potential download-and-execute payload"},
-        {"curl-pipe-bash", {"curl", "| bash"}, "critical", "Potential download-and-execute payload"},
-        {"wget-pipe-sh", {"wget", "| sh"}, "critical", "Potential download-and-execute payload"},
-        {"wget-pipe-bash", {"wget", "| bash"}, "critical", "Potential download-and-execute payload"},
-        {"nc-reverse-shell", {"nc", "-e"}, "high", "Potential reverse shell pattern"},
-        {"bash-dev-tcp", {"/dev/tcp/", "bash -i"}, "high", "Potential reverse shell pattern"},
-        {"fork-bomb", {":(){ :|:& };:"}, "critical", "Fork bomb pattern"},
-        {"setuid-root", {"setuid(0)", "exec"}, "high", "Potential privilege escalation pattern"}
+        {"rm-rf-root", {"rm -rf"}, "critical", "Potential destructive wipe command",
+         "CWE-78", "Never run rm -rf on user-controllable or system paths; require explicit confirmation and an allow-list of safe targets"},
+        {"disk-format", {"mkfs."}, "critical", "Potential disk format command",
+         "CWE-78", "Remove unattended disk-format commands; require interactive confirmation before formatting any device"},
+        {"raw-disk-overwrite", {"dd if=/dev/zero", "of=/dev/"}, "critical", "Potential destructive raw disk overwrite",
+         "CWE-78", "Avoid scripted raw writes to block devices; gate behind explicit operator confirmation"},
+        {"curl-pipe-sh", {"curl", "| sh"}, "critical", "Potential download-and-execute payload",
+         "CWE-494", "Never pipe a remote download directly into a shell; download, verify a checksum/signature, then execute"},
+        {"curl-pipe-bash", {"curl", "| bash"}, "critical", "Potential download-and-execute payload",
+         "CWE-494", "Never pipe a remote download directly into a shell; download, verify a checksum/signature, then execute"},
+        {"wget-pipe-sh", {"wget", "| sh"}, "critical", "Potential download-and-execute payload",
+         "CWE-494", "Never pipe a remote download directly into a shell; download, verify a checksum/signature, then execute"},
+        {"wget-pipe-bash", {"wget", "| bash"}, "critical", "Potential download-and-execute payload",
+         "CWE-494", "Never pipe a remote download directly into a shell; download, verify a checksum/signature, then execute"},
+        {"nc-reverse-shell", {"nc", "-e"}, "high", "Potential reverse shell pattern",
+         "CWE-78", "Remove netcat -e backdoor patterns; use proper remote-administration tooling with authentication"},
+        {"bash-dev-tcp", {"/dev/tcp/", "bash -i"}, "high", "Potential reverse shell pattern",
+         "CWE-78", "Remove interactive /dev/tcp reverse-shell patterns from scripts"},
+        {"fork-bomb", {":(){ :|:& };:"}, "critical", "Fork bomb pattern",
+         "CWE-400", "Remove unbounded self-forking constructs; enforce process/resource limits (ulimit, cgroups)"},
+        {"setuid-root", {"setuid(0)", "exec"}, "high", "Potential privilege escalation pattern",
+         "CWE-250", "Avoid dropping to setuid(0) before exec(); follow least-privilege and drop privileges instead of escalating"}
     };
 }
 
@@ -442,16 +457,24 @@ std::string stripCommentsFromLine(const std::string &line, CommentState &state)
     return cleaned;
 }
 
-std::vector<VulnerabilityFinding> scanFile(
+std::vector<Vulnerability> scanFile(
     const std::filesystem::path &filePath,
     const std::vector<DetectionRule> &rules)
 {
+    std::vector<Vulnerability> findings;
+
+    // Rich, well-tested C/C++ analyzers (injection, crypto, unsafe functions,
+    // buffer issues) — already populate CWE/CVSS/remediation/category per rule.
+    auto analyzerFindings = analyzer::parseAndAnalyzeFile(filePath);
+    findings.insert(findings.end(),
+        std::make_move_iterator(analyzerFindings.begin()),
+        std::make_move_iterator(analyzerFindings.end()));
+
     std::ifstream input(filePath);
     if (!input) {
-        return {};
+        return findings;
     }
 
-    std::vector<VulnerabilityFinding> findings;
     std::string lineContent;
     CommentState commentState;
     std::size_t lineNumber = 0;
@@ -467,14 +490,19 @@ std::vector<VulnerabilityFinding> scanFile(
         for (const auto &rule : rules) {
             if (ruleMatchesStrict(rule, loweredLine)
                 && isExecutableDangerContext(filePath, loweredLine)) {
-                findings.push_back({
-                    filePath,
-                    lineNumber,
-                    rule.id,
-                    rule.severity,
-                    rule.message,
-                    analyzableContent,
-                });
+                Vulnerability v;
+                v.id          = rule.id;
+                v.file        = filePath;
+                v.line        = lineNumber;
+                v.token       = rule.id;
+                v.severity    = severityFromString(rule.severity);
+                v.message     = rule.message;
+                v.code        = analyzableContent;
+                v.cwe         = rule.cwe;
+                v.remediation = rule.remediation;
+                v.cvssScore   = severityToCvss(v.severity);
+                v.category    = "malicious-pattern";
+                findings.push_back(std::move(v));
             }
         }
     }
@@ -519,54 +547,6 @@ bool shouldSkipDirectory(const std::filesystem::path &directoryPath, bool fullSy
     return false;
 }
 
-std::string escapeJson(const std::string &value)
-{
-    std::string escaped;
-    escaped.reserve(value.size());
-
-    for (char character : value) {
-        switch (character) {
-        case '\\':
-            escaped += "\\\\";
-            break;
-        case '"':
-            escaped += "\\\"";
-            break;
-        case '\n':
-            escaped += "\\n";
-            break;
-        case '\r':
-            escaped += "\\r";
-            break;
-        case '\t':
-            escaped += "\\t";
-            break;
-        default:
-            escaped += character;
-            break;
-        }
-    }
-
-    return escaped;
-}
-
-std::string nowIso8601Utc()
-{
-    const auto now = std::chrono::system_clock::now();
-    const std::time_t nowTime = std::chrono::system_clock::to_time_t(now);
-
-    std::tm utcTime {};
-#if defined(_WIN32)
-    gmtime_s(&utcTime, &nowTime);
-#else
-    gmtime_r(&nowTime, &utcTime);
-#endif
-
-    std::ostringstream stream;
-    stream << std::put_time(&utcTime, "%Y-%m-%dT%H:%M:%SZ");
-    return stream.str();
-}
-
 } // namespace
 
 ScanResult runScan(const ScanOptions &options, const ProgressCallback &onProgress)
@@ -579,63 +559,73 @@ ScanResult runScan(const ScanOptions &options, const ProgressCallback &onProgres
         throw std::runtime_error("Target path does not exist: " + options.codePath.string());
     }
 
-    if (!std::filesystem::is_directory(options.codePath)) {
-        throw std::runtime_error("Target path must be a directory");
+    if (!std::filesystem::is_directory(options.codePath) && !std::filesystem::is_regular_file(options.codePath)) {
+        throw std::runtime_error("Target path must be a file or a directory");
     }
+
+    const auto startTime = std::chrono::steady_clock::now();
 
     ScanResult result;
     const auto rules = defaultRules();
     std::vector<std::filesystem::path> candidates;
 
-    const bool fullSystemScan = options.scanAllSystem || options.codePath == "/";
-    std::error_code errorCode;
-    std::filesystem::recursive_directory_iterator iterator(
-        options.codePath,
-        std::filesystem::directory_options::skip_permission_denied,
-        errorCode);
-    std::filesystem::recursive_directory_iterator end;
-
-    if (errorCode) {
-        return result;
-    }
-
-    while (iterator != end) {
-        const auto currentPath = iterator->path();
-
-        if (iterator->is_directory(errorCode)) {
-            if (!errorCode && shouldSkipDirectory(currentPath, fullSystemScan)) {
-                iterator.disable_recursion_pending();
-            }
-            errorCode.clear();
-            iterator.increment(errorCode);
-            continue;
+    if (std::filesystem::is_regular_file(options.codePath)) {
+        // A single file was picked explicitly: scan it regardless of its extension,
+        // only skipping it if it looks like binary content.
+        if (isLikelyTextFile(options.codePath)) {
+            candidates.push_back(options.codePath);
         }
+    } else {
+        const bool fullSystemScan = options.scanAllSystem || options.codePath == "/";
+        std::error_code errorCode;
+        std::filesystem::recursive_directory_iterator iterator(
+            options.codePath,
+            std::filesystem::directory_options::skip_permission_denied,
+            errorCode);
+        std::filesystem::recursive_directory_iterator end;
 
         if (errorCode) {
+            return result;
+        }
+
+        while (iterator != end) {
+            const auto currentPath = iterator->path();
+
+            if (iterator->is_directory(errorCode)) {
+                if (!errorCode && shouldSkipDirectory(currentPath, fullSystemScan)) {
+                    iterator.disable_recursion_pending();
+                }
+                errorCode.clear();
+                iterator.increment(errorCode);
+                continue;
+            }
+
+            if (errorCode) {
+                errorCode.clear();
+                iterator.increment(errorCode);
+                continue;
+            }
+
+            if (!iterator->is_regular_file(errorCode)) {
+                errorCode.clear();
+                iterator.increment(errorCode);
+                continue;
+            }
+
+            if (isExcludedByDefault(currentPath)) {
+                iterator.increment(errorCode);
+                continue;
+            }
+
+            if (!isLikelyCodeFile(currentPath) || !isLikelyTextFile(currentPath)) {
+                iterator.increment(errorCode);
+                continue;
+            }
+
+            candidates.push_back(currentPath);
             errorCode.clear();
             iterator.increment(errorCode);
-            continue;
         }
-
-        if (!iterator->is_regular_file(errorCode)) {
-            errorCode.clear();
-            iterator.increment(errorCode);
-            continue;
-        }
-
-        if (isExcludedByDefault(currentPath)) {
-            iterator.increment(errorCode);
-            continue;
-        }
-
-        if (!isLikelyCodeFile(currentPath) || !isLikelyTextFile(currentPath)) {
-            iterator.increment(errorCode);
-            continue;
-        }
-
-        candidates.push_back(currentPath);
-        errorCode.clear();
-        iterator.increment(errorCode);
     }
 
     result.scannedFiles = candidates.size();
@@ -643,6 +633,7 @@ ScanResult runScan(const ScanOptions &options, const ProgressCallback &onProgres
         if (onProgress) {
             onProgress({0, 0, {}});
         }
+        result.durationSec = std::chrono::duration<double>(std::chrono::steady_clock::now() - startTime).count();
         return result;
     }
 
@@ -685,44 +676,8 @@ ScanResult runScan(const ScanOptions &options, const ProgressCallback &onProgres
         worker.join();
     }
 
+    result.durationSec = std::chrono::duration<double>(std::chrono::steady_clock::now() - startTime).count();
     return result;
-}
-
-void writeReport(const std::filesystem::path &reportPath,
-    const std::filesystem::path &codePath,
-    const ScanResult &scanResult)
-{
-    std::ofstream output(reportPath);
-    if (!output) {
-        throw std::runtime_error("Unable to open report file: " + reportPath.string());
-    }
-
-    output << "{\n";
-    output << "  \"tool\": \"EpiScan\",\n";
-    output << "  \"generated_at\": \"" << nowIso8601Utc() << "\",\n";
-    output << "  \"target_path\": \"" << escapeJson(codePath.string()) << "\",\n";
-    output << "  \"summary\": {\n";
-    output << "    \"scanned_files\": " << scanResult.scannedFiles << ",\n";
-    output << "    \"detected_vulnerabilities\": " << scanResult.findings.size() << "\n";
-    output << "  },\n";
-    output << "  \"vulnerabilities\": [\n";
-
-    for (std::size_t index = 0; index < scanResult.findings.size(); ++index) {
-        const auto &finding = scanResult.findings[index];
-        const bool isLast = (index + 1 == scanResult.findings.size());
-
-        output << "    {\n";
-        output << "      \"file\": \"" << escapeJson(finding.file.string()) << "\",\n";
-        output << "      \"line\": " << finding.line << ",\n";
-        output << "      \"rule\": \"" << escapeJson(finding.matchedToken) << "\",\n";
-        output << "      \"severity\": \"" << escapeJson(finding.severity) << "\",\n";
-        output << "      \"message\": \"" << escapeJson(finding.message) << "\",\n";
-        output << "      \"code\": \"" << escapeJson(finding.code) << "\"\n";
-        output << "    }" << (isLast ? "\n" : ",\n");
-    }
-
-    output << "  ]\n";
-    output << "}\n";
 }
 
 } // namespace episcan

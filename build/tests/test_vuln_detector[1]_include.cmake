@@ -1,0 +1,5 @@
+if(EXISTS "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector[1]_tests.cmake")
+  include("/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector[1]_tests.cmake")
+else()
+  add_test(test_vuln_detector_NOT_BUILT test_vuln_detector_NOT_BUILT)
+endif()

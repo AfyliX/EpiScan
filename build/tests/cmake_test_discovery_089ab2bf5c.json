@@ -1,0 +1,69 @@
+{
+  "tests": 9,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Integration",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "ScanAndProduceJsonReport",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 70
+        },
+        {
+          "name": "ScanAndProduceHtmlReport",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 93
+        },
+        {
+          "name": "ScanAndProduceMarkdownReport",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 115
+        }
+      ]
+    },
+    {
+      "name": "Cvss31",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "KnownVector_9_8",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 137
+        },
+        {
+          "name": "ParseVectorString",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 154
+        },
+        {
+          "name": "CvssForInjectionCategory",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 165
+        },
+        {
+          "name": "CvssForCryptoCategory",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 172
+        }
+      ]
+    },
+    {
+      "name": "Metrics",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "ComputesSecurityScore",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 182
+        },
+        {
+          "name": "EmptyFindingsMaxScore",
+          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_integration.cpp",
+          "line": 197
+        }
+      ]
+    }
+  ]
+}

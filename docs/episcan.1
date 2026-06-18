@@ -1,0 +1,100 @@
+.TH EPISCAN-CLI 1 "2026" "EpiScan" "User Commands"
+.SH NAME
+episcan-cli \- static code and network security scanner
+.SH SYNOPSIS
+.B episcan-cli
+.B \-\-code
+.I path
+[\fB\-\-report\fR \fIpath\fR] [\fB\-\-format\fR \fIjson|html|md\fR]
+.br
+.B episcan-cli
+.B \-\-all-system
+[\fB\-\-report\fR \fIpath\fR]
+.br
+.B episcan-cli
+.B \-\-network
+.I host
+[\fB\-\-port-start\fR \fIn\fR] [\fB\-\-port-end\fR \fIn\fR] [\fB\-\-report\fR \fIpath\fR]
+.br
+.B episcan-cli
+.B \-\-code
+.I path
+.B \-\-network
+.I host
+[\fB\-\-report\fR \fIpath\fR]
+.SH DESCRIPTION
+.B episcan-cli
+analyzes source code for vulnerability patterns (SQL/command injection, weak
+cryptography, unsafe C/C++ functions, buffer-handling issues, dangerous shell
+one-liners) and/or performs a network scan (open ports, banner grabbing,
+service identification, SSL/TLS audit) against a host. Findings are scored
+with CVSS v3.1 and written to a JSON, HTML, or Markdown report.
+.SH MODES
+.TP
+.B analyze
+Triggered by \fB\-\-code\fR or \fB\-\-all-system\fR. Scans a file or directory
+tree for vulnerable code patterns.
+.TP
+.B network
+Triggered by \fB\-\-network\fR. Scans a host's TCP ports, grabs service
+banners, and runs an SSL/TLS audit on detected HTTPS-like ports.
+.TP
+.B full
+Pass both \fB\-\-code\fR and \fB\-\-network\fR to run both and merge the
+results into a single report.
+.SH OPTIONS
+.TP
+.BR \-\-code " " \fIpath\fR
+Directory or file to scan for code vulnerabilities.
+.TP
+.B \-\-all-system
+Scan the whole system starting from \fB/\fR (Linux only). Mutually exclusive
+with an explicit \fB\-\-code\fR path other than \fB/\fR.
+.TP
+.BR \-\-network " " \fIhost\fR
+Run a network scan (ports, banners, SSL audit) against \fIhost\fR.
+.TP
+.BR \-\-port-start " " \fIn\fR
+First port scanned in network mode (default: 1).
+.TP
+.BR \-\-port-end " " \fIn\fR
+Last port scanned in network mode (default: 1024).
+.TP
+.BR \-\-report " " \fIpath\fR
+Output report path (default: \fBreport.json\fR). If a previous report
+already exists at this path, the new report records the delta in finding
+count versus that previous scan.
+.TP
+.BR \-\-format " " \fI{json,html,md}\fR
+Report format. If omitted, the format is inferred from \fB\-\-report\fR's
+file extension (\fB.html\fR/\fB.htm\fR, \fB.md\fR/\fB.markdown\fR, otherwise
+JSON).
+.TP
+.B \-\-help
+Show usage and exit.
+.SH EXAMPLES
+.TP
+Scan a source tree and write an HTML report:
+.B episcan-cli \-\-code ./src \-\-report report.html
+.TP
+Scan all 65535 ports of a host and write JSON:
+.B episcan-cli \-\-network 192.168.1.10 \-\-port-end 65535 \-\-report net.json
+.TP
+Full scan (code + network) as Markdown:
+.B episcan-cli \-\-code ./src \-\-network 127.0.0.1 \-\-report full.md \-\-format md
+.SH EXIT STATUS
+.B 0
+on success, non-zero on error (invalid arguments, unreadable target, etc).
+The error message is printed to stderr.
+.SH NOTES
+The network CVE/vulnerable-version check is intentionally offline (a local
+signature table) rather than a live NVD API lookup, so the tool has no
+network dependency beyond the scan target itself.
+.SH SEE ALSO
+The GUI front-end
+.BR episcan (1)
+and the traffic-capture tool
+.BR episcan-net (1)
+ship alongside
+.BR episcan-cli .
+Full documentation: \fIdocs/user_guide.md\fR in the EpiScan repository.

@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/episcan.dir/src/gui_main.cpp.o -o episcan  libepiscan_core.a /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.6.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.6.1 

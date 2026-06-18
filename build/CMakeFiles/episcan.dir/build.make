@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mangabigab/EPITECH/hub/EpiScan
+CMAKE_SOURCE_DIR = /home/axel/EpiScan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mangabigab/EPITECH/hub/EpiScan/build
+CMAKE_BINARY_DIR = /home/axel/EpiScan/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/episcan.dir/depend.make
@@ -72,43 +72,39 @@ include CMakeFiles/episcan.dir/flags.make
 CMakeFiles/episcan.dir/codegen:
 .PHONY : CMakeFiles/episcan.dir/codegen
 
-CMakeFiles/episcan.dir/src/gui_main.cpp.o: CMakeFiles/episcan.dir/flags.make
-CMakeFiles/episcan.dir/src/gui_main.cpp.o: /home/mangabigab/EPITECH/hub/EpiScan/src/gui_main.cpp
-CMakeFiles/episcan.dir/src/gui_main.cpp.o: CMakeFiles/episcan.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/episcan.dir/src/gui_main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan.dir/src/gui_main.cpp.o -MF CMakeFiles/episcan.dir/src/gui_main.cpp.o.d -o CMakeFiles/episcan.dir/src/gui_main.cpp.o -c /home/mangabigab/EPITECH/hub/EpiScan/src/gui_main.cpp
+CMakeFiles/episcan.dir/src/cli_main.cpp.o: CMakeFiles/episcan.dir/flags.make
+CMakeFiles/episcan.dir/src/cli_main.cpp.o: /home/axel/EpiScan/src/cli_main.cpp
+CMakeFiles/episcan.dir/src/cli_main.cpp.o: CMakeFiles/episcan.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/episcan.dir/src/cli_main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan.dir/src/cli_main.cpp.o -MF CMakeFiles/episcan.dir/src/cli_main.cpp.o.d -o CMakeFiles/episcan.dir/src/cli_main.cpp.o -c /home/axel/EpiScan/src/cli_main.cpp
 
-CMakeFiles/episcan.dir/src/gui_main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan.dir/src/gui_main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mangabigab/EPITECH/hub/EpiScan/src/gui_main.cpp > CMakeFiles/episcan.dir/src/gui_main.cpp.i
+CMakeFiles/episcan.dir/src/cli_main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan.dir/src/cli_main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/src/cli_main.cpp > CMakeFiles/episcan.dir/src/cli_main.cpp.i
 
-CMakeFiles/episcan.dir/src/gui_main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan.dir/src/gui_main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mangabigab/EPITECH/hub/EpiScan/src/gui_main.cpp -o CMakeFiles/episcan.dir/src/gui_main.cpp.s
+CMakeFiles/episcan.dir/src/cli_main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan.dir/src/cli_main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/src/cli_main.cpp -o CMakeFiles/episcan.dir/src/cli_main.cpp.s
 
 # Object files for target episcan
 episcan_OBJECTS = \
-"CMakeFiles/episcan.dir/src/gui_main.cpp.o"
+"CMakeFiles/episcan.dir/src/cli_main.cpp.o"
 
 # External object files for target episcan
 episcan_EXTERNAL_OBJECTS =
 
-episcan: CMakeFiles/episcan.dir/src/gui_main.cpp.o
+episcan: CMakeFiles/episcan.dir/src/cli_main.cpp.o
 episcan: CMakeFiles/episcan.dir/build.make
 episcan: CMakeFiles/episcan.dir/compiler_depend.ts
 episcan: libepiscan_core.a
 episcan: libepiscan_network.a
-episcan: /opt/sfml2/lib/libsfml-graphics.so.2.6.2
-episcan: /opt/sfml2/lib/libsfml-window.so.2.6.2
-episcan: /opt/sfml2/lib/libsfml-system.so.2.6.2
-episcan: libepiscan_traffic.a
+episcan: /usr/lib/libcurl.so
+episcan: /usr/lib/libcurl.so
 episcan: /usr/lib/libssl.so
 episcan: /usr/lib/libcrypto.so
-episcan: /usr/lib/libpcap.so
 episcan: CMakeFiles/episcan.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable episcan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable episcan"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/episcan.dir/link.txt --verbose=$(VERBOSE)
-	sh -c "/usr/bin/setcap cap_net_raw,cap_net_admin=eip /home/mangabigab/EPITECH/hub/EpiScan/build/episcan 2>/dev/null || echo '[episcan] could not grant CAP_NET_RAW automatically -- run: sudo setcap cap_net_raw,cap_net_admin=eip /home/mangabigab/EPITECH/hub/EpiScan/build/episcan'"
 
 # Rule to build all files generated by this target.
 CMakeFiles/episcan.dir/build: episcan
@@ -119,6 +115,6 @@ CMakeFiles/episcan.dir/clean:
 .PHONY : CMakeFiles/episcan.dir/clean
 
 CMakeFiles/episcan.dir/depend:
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mangabigab/EPITECH/hub/EpiScan /home/mangabigab/EPITECH/hub/EpiScan /home/mangabigab/EPITECH/hub/EpiScan/build /home/mangabigab/EPITECH/hub/EpiScan/build /home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles/episcan.dir/DependInfo.cmake "--color=$(COLOR)" episcan
+	cd /home/axel/EpiScan/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/EpiScan /home/axel/EpiScan /home/axel/EpiScan/build /home/axel/EpiScan/build /home/axel/EpiScan/build/CMakeFiles/episcan.dir/DependInfo.cmake "--color=$(COLOR)" episcan
 .PHONY : CMakeFiles/episcan.dir/depend
 

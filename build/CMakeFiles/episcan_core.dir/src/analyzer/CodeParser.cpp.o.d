@@ -1,9 +1,9 @@
 CMakeFiles/episcan_core.dir/src/analyzer/CodeParser.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/analyzer/CodeParser.cpp \
+ /home/axel/EpiScan/src/analyzer/CodeParser.cpp \
  /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/analyzer/CodeParser.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Vulnerability.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Severity.hpp \
+ /home/axel/EpiScan/include/analyzer/CodeParser.hpp \
+ /home/axel/EpiScan/include/core/Vulnerability.hpp \
+ /home/axel/EpiScan/include/core/Severity.hpp \
  /usr/include/c++/16.1.1/string \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -184,16 +184,16 @@ CMakeFiles/episcan_core.dir/src/analyzer/CodeParser.cpp.o: \
  /usr/include/c++/16.1.1/ext/aligned_buffer.h \
  /usr/include/c++/16.1.1/bits/fs_dir.h \
  /usr/include/c++/16.1.1/bits/fs_ops.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Config.hpp \
+ /home/axel/EpiScan/include/core/Config.hpp \
  /usr/include/c++/16.1.1/vector \
  /usr/include/c++/16.1.1/bits/stl_uninitialized.h \
  /usr/include/c++/16.1.1/bits/stl_vector.h \
  /usr/include/c++/16.1.1/bits/stl_bvector.h \
  /usr/include/c++/16.1.1/bits/vector.tcc \
- /home/mangabigab/EPITECH/hub/EpiScan/include/analyzer/CryptoDetector.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/analyzer/InjectionDetector.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/analyzer/UnsafeFunctionDetector.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/analyzer/VulnDetector.hpp \
+ /home/axel/EpiScan/include/analyzer/CryptoDetector.hpp \
+ /home/axel/EpiScan/include/analyzer/InjectionDetector.hpp \
+ /home/axel/EpiScan/include/analyzer/UnsafeFunctionDetector.hpp \
+ /home/axel/EpiScan/include/analyzer/VulnDetector.hpp \
  /usr/include/c++/16.1.1/algorithm \
  /usr/include/c++/16.1.1/bits/stl_algo.h \
  /usr/include/c++/16.1.1/bits/algorithmfwd.h \

@@ -1,10 +1,11 @@
 #include "network/PortScanner.hpp"
 
-#include <boost/asio.hpp>
+#include <asio.hpp>
 
 #include <atomic>
 #include <chrono>
 #include <string>
+#include <system_error>
 #include <thread>
 #include <vector>
 
@@ -12,11 +13,9 @@ namespace episcan {
 namespace network {
 namespace {
 
-namespace asio = boost::asio;
-
 // One fresh io_context per attempt keeps the worker-thread-pool structure
 // below unchanged (each thread blocks on a single port at a time) while the
-// connect+timeout itself is done through Boost.Asio (#71) instead of raw
+// connect+timeout itself is done through Asio (#71) instead of raw
 // POSIX sockets. The resolver has no protocol hint, so it returns both IPv4
 // and IPv6 endpoints when available (dual-stack, like getaddrinfo(AF_UNSPEC)
 // did) and async_connect tries them in order until one succeeds (#75).
@@ -25,7 +24,7 @@ bool tryConnect(const std::string &host, uint16_t port, int timeoutMs)
     asio::io_context io;
 
     asio::ip::tcp::resolver resolver(io);
-    boost::system::error_code resolveEc;
+    std::error_code resolveEc;
     const auto endpoints = resolver.resolve(host, std::to_string(port), resolveEc);
     if (resolveEc || endpoints.empty()) {
         return false;
@@ -34,19 +33,19 @@ bool tryConnect(const std::string &host, uint16_t port, int timeoutMs)
     asio::ip::tcp::socket socket(io);
     asio::steady_timer    timer(io);
 
-    bool                       connectDone = false;
-    boost::system::error_code connectEc   = asio::error::would_block;
+    bool            connectDone = false;
+    std::error_code connectEc   = asio::error::would_block;
 
     timer.expires_after(std::chrono::milliseconds(timeoutMs));
-    timer.async_wait([&](const boost::system::error_code &ec) {
+    timer.async_wait([&](const std::error_code &ec) {
         if (!ec) {
-            boost::system::error_code ignore;
+            std::error_code ignore;
             socket.cancel(ignore);
         }
     });
 
     asio::async_connect(socket, endpoints,
-        [&](const boost::system::error_code &ec, const asio::ip::tcp::endpoint &) {
+        [&](const std::error_code &ec, const asio::ip::tcp::endpoint &) {
             connectEc   = ec;
             connectDone = true;
             timer.cancel();

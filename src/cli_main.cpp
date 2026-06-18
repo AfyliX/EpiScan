@@ -37,12 +37,14 @@ int main(int argc, char **argv)
     bool        allSystem = false;
     uint16_t    portStart = 1;
     uint16_t    portEnd   = 1024;
+    bool        cveCheck  = false;
 
     app.add_option("--code", codePathStr, "Directory or file to scan for code vulnerabilities (analyze mode)");
     app.add_flag("--all-system", allSystem, "Scan the whole system from / (Linux only, analyze mode)");
     app.add_option("--network", networkTarget, "Host to run a network scan against (ports, banners, SSL audit; network mode)");
     app.add_option("--port-start", portStart, "First port for --network")->default_val(1);
     app.add_option("--port-end", portEnd, "Last port for --network")->default_val(1024);
+    app.add_flag("--cve-check", cveCheck, "Query the NVD REST API for live CVE data (requires internet; off by default)");
     app.add_option("--report", reportPathStr, "Output report path")->default_val("report.json");
     app.add_option("--format", format, "Report format: json, html, or md (default: inferred from --report extension)")
         ->check(CLI::IsMember({"json", "html", "md"}));
@@ -51,9 +53,12 @@ int main(int argc, char **argv)
         "Examples:\n"
         "  episcan-cli --code ./src --report report.html\n"
         "  episcan-cli --network 192.168.1.10 --port-end 65535 --report net.json\n"
+        "  episcan-cli --network 192.168.1.10 --cve-check --report net.json\n"
         "  episcan-cli --code ./src --network 127.0.0.1 --report full.md --format md\n"
         "\n"
-        "Pass both --code and --network to run a combined \"full\" scan.");
+        "Pass both --code and --network to run a combined \"full\" scan.\n"
+        "--cve-check queries the NVD REST API (internet required); results are cached\n"
+        "for 7 days under ~/.cache/episcan/nvd_cache.json.");
 
     CLI11_PARSE(app, argc, argv);
 
@@ -106,6 +111,7 @@ int main(int argc, char **argv)
             netOptions.portStart = portStart;
             netOptions.portEnd   = portEnd;
             netOptions.sslAudit  = true;
+            netOptions.cveCheck  = cveCheck;
 
             std::cout << "[scan] network target: " << netOptions.target
                        << " ports " << netOptions.portStart << "-" << netOptions.portEnd << "\n";

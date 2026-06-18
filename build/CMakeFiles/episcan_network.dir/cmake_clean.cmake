@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o"
   "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o.d"
+  "CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o"
+  "CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o.d"
   "CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o"
   "CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o.d"
   "CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o"

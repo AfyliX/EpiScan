@@ -1,9 +1,8 @@
 CMakeFiles/episcan_core.dir/src/core/Metrics.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/core/Metrics.cpp \
- /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Metrics.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Vulnerability.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Severity.hpp \
+ /home/axel/EpiScan/src/core/Metrics.cpp /usr/include/stdc-predef.h \
+ /home/axel/EpiScan/include/core/Metrics.hpp \
+ /home/axel/EpiScan/include/core/Vulnerability.hpp \
+ /home/axel/EpiScan/include/core/Severity.hpp \
  /usr/include/c++/16.1.1/string \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/episcan.dir/link.d"
-  "CMakeFiles/episcan.dir/src/gui_main.cpp.o"
-  "CMakeFiles/episcan.dir/src/gui_main.cpp.o.d"
+  "CMakeFiles/episcan.dir/src/cli_main.cpp.o"
+  "CMakeFiles/episcan.dir/src/cli_main.cpp.o.d"
   "episcan"
   "episcan.pdb"
 )

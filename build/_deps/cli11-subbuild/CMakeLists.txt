@@ -28,8 +28,8 @@ set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
 include(ExternalProject)
 ExternalProject_Add(cli11-populate
                      "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/CLIUtils/CLI11.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "v2.4.2" "GIT_SHALLOW" "TRUE"
-                    SOURCE_DIR          "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-src"
-                    BINARY_DIR          "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-build"
+                    SOURCE_DIR          "/home/axel/EpiScan/build/_deps/cli11-src"
+                    BINARY_DIR          "/home/axel/EpiScan/build/_deps/cli11-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

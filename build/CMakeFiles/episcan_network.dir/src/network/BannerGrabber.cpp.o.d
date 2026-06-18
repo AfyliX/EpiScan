@@ -1,7 +1,7 @@
 CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/network/BannerGrabber.cpp \
+ /home/axel/EpiScan/src/network/BannerGrabber.cpp \
  /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/BannerGrabber.hpp \
+ /home/axel/EpiScan/include/network/BannerGrabber.hpp \
  /usr/include/c++/16.1.1/cstdint \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

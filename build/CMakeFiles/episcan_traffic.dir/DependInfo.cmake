@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mangabigab/EPITECH/hub/EpiScan/src/network/TrafficAnalyzer.cpp" "CMakeFiles/episcan_traffic.dir/src/network/TrafficAnalyzer.cpp.o" "gcc" "CMakeFiles/episcan_traffic.dir/src/network/TrafficAnalyzer.cpp.o.d"
+  "/home/axel/EpiScan/src/network/TrafficAnalyzer.cpp" "CMakeFiles/episcan_traffic.dir/src/network/TrafficAnalyzer.cpp.o" "gcc" "CMakeFiles/episcan_traffic.dir/src/network/TrafficAnalyzer.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

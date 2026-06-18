@@ -1,9 +1,9 @@
 CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/network/NetworkvulAnalyzer.cpp \
+ /home/axel/EpiScan/src/network/NetworkvulAnalyzer.cpp \
  /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/NetworkvulAnalyzer.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/ServiceDetector.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/BannerGrabber.hpp \
+ /home/axel/EpiScan/include/network/NetworkvulAnalyzer.hpp \
+ /home/axel/EpiScan/include/network/ServiceDetector.hpp \
+ /home/axel/EpiScan/include/network/BannerGrabber.hpp \
  /usr/include/c++/16.1.1/cstdint \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -117,8 +117,8 @@ CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: \
  /usr/include/c++/16.1.1/bits/stl_vector.h \
  /usr/include/c++/16.1.1/bits/stl_bvector.h \
  /usr/include/c++/16.1.1/bits/vector.tcc \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Vulnerability.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Severity.hpp \
+ /home/axel/EpiScan/include/core/Vulnerability.hpp \
+ /home/axel/EpiScan/include/core/Severity.hpp \
  /usr/include/c++/16.1.1/filesystem /usr/include/c++/16.1.1/bits/fs_fwd.h \
  /usr/include/c++/16.1.1/system_error \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/error_constants.h \
@@ -189,7 +189,8 @@ CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: \
  /usr/include/c++/16.1.1/ext/aligned_buffer.h \
  /usr/include/c++/16.1.1/bits/fs_dir.h \
  /usr/include/c++/16.1.1/bits/fs_ops.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/PortScanner.hpp \
+ /home/axel/EpiScan/include/network/PortScanner.hpp \
+ /home/axel/EpiScan/include/network/CveLookup.hpp \
  /usr/include/c++/16.1.1/algorithm \
  /usr/include/c++/16.1.1/bits/stl_algo.h \
  /usr/include/c++/16.1.1/bits/algorithmfwd.h \

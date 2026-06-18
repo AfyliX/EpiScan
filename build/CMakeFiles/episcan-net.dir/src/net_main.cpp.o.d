@@ -1,7 +1,6 @@
 CMakeFiles/episcan-net.dir/src/net_main.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/net_main.cpp \
- /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/TrafficAnalyzer.hpp \
+ /home/axel/EpiScan/src/net_main.cpp /usr/include/stdc-predef.h \
+ /home/axel/EpiScan/include/network/TrafficAnalyzer.hpp \
  /usr/include/c++/16.1.1/cstdint \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

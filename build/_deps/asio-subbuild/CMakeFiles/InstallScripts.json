@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/axel/EpiScan/build/_deps/asio-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

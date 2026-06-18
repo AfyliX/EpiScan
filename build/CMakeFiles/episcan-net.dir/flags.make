@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mangabigab/EPITECH/hub/EpiScan/include -I/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include
+CXX_INCLUDES = -I/home/axel/EpiScan/include -I/home/axel/EpiScan/build/_deps/nlohmann_json-src/include
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++17
 

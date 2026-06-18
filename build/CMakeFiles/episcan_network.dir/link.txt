@@ -1,2 +1,2 @@
-/usr/bin/ar qc libepiscan_network.a CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o
+/usr/bin/ar qc libepiscan_network.a CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o
 /usr/bin/ranlib libepiscan_network.a

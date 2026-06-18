@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src")
-  file(MAKE_DIRECTORY "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src")
+if(NOT EXISTS "/home/axel/EpiScan/build/_deps/googletest-src")
+  file(MAKE_DIRECTORY "/home/axel/EpiScan/build/_deps/googletest-src")
 endif()
 file(MAKE_DIRECTORY
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-build"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/home/axel/EpiScan/build/_deps/googletest-build"
+  "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix"
+  "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
+  "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src"
+  "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/axel/EpiScan/build/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

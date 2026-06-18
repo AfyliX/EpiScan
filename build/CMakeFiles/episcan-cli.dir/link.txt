@@ -1,1 +1,1 @@
-/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/episcan-cli.dir/link.d "CMakeFiles/episcan-cli.dir/src/cli_main.cpp.o" -o episcan-cli  libepiscan_core.a libepiscan_network.a /usr/lib/libssl.so /usr/lib/libcrypto.so
+/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/episcan-cli.dir/link.d "CMakeFiles/episcan-cli.dir/src/cli_main.cpp.o" -o episcan-cli  libepiscan_core.a libepiscan_network.a /usr/lib/libcurl.so /usr/lib/libcurl.so /usr/lib/libssl.so /usr/lib/libcrypto.so

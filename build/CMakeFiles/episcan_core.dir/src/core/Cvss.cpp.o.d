@@ -1,8 +1,6 @@
 CMakeFiles/episcan_core.dir/src/core/Cvss.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/core/Cvss.cpp \
- /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Cvss.hpp \
- /usr/include/c++/16.1.1/string \
+ /home/axel/EpiScan/src/core/Cvss.cpp /usr/include/stdc-predef.h \
+ /home/axel/EpiScan/include/core/Cvss.hpp /usr/include/c++/16.1.1/string \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

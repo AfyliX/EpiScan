@@ -1,13 +1,13 @@
-Start testing: Jun 18 17:09 CEST
+Start testing: Jun 18 17:38 CEST
 ----------------------------------------------------------
 1/36 Testing: InjectionDetector.DetectsSqlConcatenation
 1/36 Test: InjectionDetector.DetectsSqlConcatenation
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=InjectionDetector.DetectsSqlConcatenation" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"InjectionDetector.DetectsSqlConcatenation" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=InjectionDetector.DetectsSqlConcatenation" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"InjectionDetector.DetectsSqlConcatenation" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = InjectionDetector.DetectsSqlConcatenation
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -23,18 +23,18 @@ Note: Google Test filter = InjectionDetector.DetectsSqlConcatenation
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"InjectionDetector.DetectsSqlConcatenation" end time: Jun 18 17:09 CEST
+"InjectionDetector.DetectsSqlConcatenation" end time: Jun 18 17:38 CEST
 "InjectionDetector.DetectsSqlConcatenation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 2/36 Testing: InjectionDetector.DetectsSystemConcatenation
 2/36 Test: InjectionDetector.DetectsSystemConcatenation
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=InjectionDetector.DetectsSystemConcatenation" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"InjectionDetector.DetectsSystemConcatenation" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=InjectionDetector.DetectsSystemConcatenation" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"InjectionDetector.DetectsSystemConcatenation" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = InjectionDetector.DetectsSystemConcatenation
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -47,21 +47,21 @@ Note: Google Test filter = InjectionDetector.DetectsSystemConcatenation
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"InjectionDetector.DetectsSystemConcatenation" end time: Jun 18 17:09 CEST
+"InjectionDetector.DetectsSystemConcatenation" end time: Jun 18 17:38 CEST
 "InjectionDetector.DetectsSystemConcatenation" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 3/36 Testing: InjectionDetector.CleanCodeProducesNoFindings
 3/36 Test: InjectionDetector.CleanCodeProducesNoFindings
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=InjectionDetector.CleanCodeProducesNoFindings" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"InjectionDetector.CleanCodeProducesNoFindings" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=InjectionDetector.CleanCodeProducesNoFindings" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"InjectionDetector.CleanCodeProducesNoFindings" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = InjectionDetector.CleanCodeProducesNoFindings
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -77,18 +77,18 @@ Note: Google Test filter = InjectionDetector.CleanCodeProducesNoFindings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"InjectionDetector.CleanCodeProducesNoFindings" end time: Jun 18 17:09 CEST
+"InjectionDetector.CleanCodeProducesNoFindings" end time: Jun 18 17:38 CEST
 "InjectionDetector.CleanCodeProducesNoFindings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 4/36 Testing: CryptoDetector.DetectsMd5
 4/36 Test: CryptoDetector.DetectsMd5
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.DetectsMd5" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"CryptoDetector.DetectsMd5" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.DetectsMd5" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"CryptoDetector.DetectsMd5" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CryptoDetector.DetectsMd5
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -104,18 +104,18 @@ Note: Google Test filter = CryptoDetector.DetectsMd5
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CryptoDetector.DetectsMd5" end time: Jun 18 17:09 CEST
+"CryptoDetector.DetectsMd5" end time: Jun 18 17:38 CEST
 "CryptoDetector.DetectsMd5" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 5/36 Testing: CryptoDetector.DetectsHardcodedSecret
 5/36 Test: CryptoDetector.DetectsHardcodedSecret
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.DetectsHardcodedSecret" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"CryptoDetector.DetectsHardcodedSecret" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.DetectsHardcodedSecret" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"CryptoDetector.DetectsHardcodedSecret" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CryptoDetector.DetectsHardcodedSecret
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -131,18 +131,18 @@ Note: Google Test filter = CryptoDetector.DetectsHardcodedSecret
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CryptoDetector.DetectsHardcodedSecret" end time: Jun 18 17:09 CEST
+"CryptoDetector.DetectsHardcodedSecret" end time: Jun 18 17:38 CEST
 "CryptoDetector.DetectsHardcodedSecret" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 6/36 Testing: CryptoDetector.DetectsPredictableSeed
 6/36 Test: CryptoDetector.DetectsPredictableSeed
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.DetectsPredictableSeed" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"CryptoDetector.DetectsPredictableSeed" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.DetectsPredictableSeed" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"CryptoDetector.DetectsPredictableSeed" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CryptoDetector.DetectsPredictableSeed
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -158,18 +158,18 @@ Note: Google Test filter = CryptoDetector.DetectsPredictableSeed
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CryptoDetector.DetectsPredictableSeed" end time: Jun 18 17:09 CEST
+"CryptoDetector.DetectsPredictableSeed" end time: Jun 18 17:38 CEST
 "CryptoDetector.DetectsPredictableSeed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 7/36 Testing: CryptoDetector.CleanCryptoNoFindings
 7/36 Test: CryptoDetector.CleanCryptoNoFindings
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.CleanCryptoNoFindings" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"CryptoDetector.CleanCryptoNoFindings" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=CryptoDetector.CleanCryptoNoFindings" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"CryptoDetector.CleanCryptoNoFindings" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CryptoDetector.CleanCryptoNoFindings
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -185,18 +185,18 @@ Note: Google Test filter = CryptoDetector.CleanCryptoNoFindings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CryptoDetector.CleanCryptoNoFindings" end time: Jun 18 17:09 CEST
+"CryptoDetector.CleanCryptoNoFindings" end time: Jun 18 17:38 CEST
 "CryptoDetector.CleanCryptoNoFindings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 8/36 Testing: UnsafeFunctionDetector.DetectsGets
 8/36 Test: UnsafeFunctionDetector.DetectsGets
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.DetectsGets" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"UnsafeFunctionDetector.DetectsGets" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.DetectsGets" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"UnsafeFunctionDetector.DetectsGets" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = UnsafeFunctionDetector.DetectsGets
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -212,18 +212,18 @@ Note: Google Test filter = UnsafeFunctionDetector.DetectsGets
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"UnsafeFunctionDetector.DetectsGets" end time: Jun 18 17:09 CEST
+"UnsafeFunctionDetector.DetectsGets" end time: Jun 18 17:38 CEST
 "UnsafeFunctionDetector.DetectsGets" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 9/36 Testing: UnsafeFunctionDetector.DetectsStrcpy
 9/36 Test: UnsafeFunctionDetector.DetectsStrcpy
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.DetectsStrcpy" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"UnsafeFunctionDetector.DetectsStrcpy" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.DetectsStrcpy" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"UnsafeFunctionDetector.DetectsStrcpy" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = UnsafeFunctionDetector.DetectsStrcpy
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -239,18 +239,18 @@ Note: Google Test filter = UnsafeFunctionDetector.DetectsStrcpy
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"UnsafeFunctionDetector.DetectsStrcpy" end time: Jun 18 17:09 CEST
+"UnsafeFunctionDetector.DetectsStrcpy" end time: Jun 18 17:38 CEST
 "UnsafeFunctionDetector.DetectsStrcpy" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 10/36 Testing: UnsafeFunctionDetector.DetectsSystemCall
 10/36 Test: UnsafeFunctionDetector.DetectsSystemCall
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.DetectsSystemCall" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"UnsafeFunctionDetector.DetectsSystemCall" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.DetectsSystemCall" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"UnsafeFunctionDetector.DetectsSystemCall" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = UnsafeFunctionDetector.DetectsSystemCall
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -266,18 +266,18 @@ Note: Google Test filter = UnsafeFunctionDetector.DetectsSystemCall
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"UnsafeFunctionDetector.DetectsSystemCall" end time: Jun 18 17:09 CEST
+"UnsafeFunctionDetector.DetectsSystemCall" end time: Jun 18 17:38 CEST
 "UnsafeFunctionDetector.DetectsSystemCall" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 11/36 Testing: UnsafeFunctionDetector.SkipsNonCFiles
 11/36 Test: UnsafeFunctionDetector.SkipsNonCFiles
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.SkipsNonCFiles" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"UnsafeFunctionDetector.SkipsNonCFiles" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=UnsafeFunctionDetector.SkipsNonCFiles" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"UnsafeFunctionDetector.SkipsNonCFiles" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = UnsafeFunctionDetector.SkipsNonCFiles
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -293,18 +293,18 @@ Note: Google Test filter = UnsafeFunctionDetector.SkipsNonCFiles
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"UnsafeFunctionDetector.SkipsNonCFiles" end time: Jun 18 17:09 CEST
+"UnsafeFunctionDetector.SkipsNonCFiles" end time: Jun 18 17:38 CEST
 "UnsafeFunctionDetector.SkipsNonCFiles" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 12/36 Testing: CodeParser.AnalyzesDirectoryAndCountsFiles
 12/36 Test: CodeParser.AnalyzesDirectoryAndCountsFiles
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_code_parser" "--gtest_filter=CodeParser.AnalyzesDirectoryAndCountsFiles" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"CodeParser.AnalyzesDirectoryAndCountsFiles" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_code_parser" "--gtest_filter=CodeParser.AnalyzesDirectoryAndCountsFiles" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"CodeParser.AnalyzesDirectoryAndCountsFiles" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = CodeParser.AnalyzesDirectoryAndCountsFiles
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -320,18 +320,18 @@ Note: Google Test filter = CodeParser.AnalyzesDirectoryAndCountsFiles
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"CodeParser.AnalyzesDirectoryAndCountsFiles" end time: Jun 18 17:09 CEST
+"CodeParser.AnalyzesDirectoryAndCountsFiles" end time: Jun 18 17:38 CEST
 "CodeParser.AnalyzesDirectoryAndCountsFiles" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 13/36 Testing: VulnDetector.DetectsMallocWithoutCheck
 13/36 Test: VulnDetector.DetectsMallocWithoutCheck
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.DetectsMallocWithoutCheck" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"VulnDetector.DetectsMallocWithoutCheck" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.DetectsMallocWithoutCheck" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"VulnDetector.DetectsMallocWithoutCheck" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = VulnDetector.DetectsMallocWithoutCheck
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -347,18 +347,18 @@ Note: Google Test filter = VulnDetector.DetectsMallocWithoutCheck
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"VulnDetector.DetectsMallocWithoutCheck" end time: Jun 18 17:09 CEST
+"VulnDetector.DetectsMallocWithoutCheck" end time: Jun 18 17:38 CEST
 "VulnDetector.DetectsMallocWithoutCheck" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 14/36 Testing: VulnDetector.DetectsArrayNoChecks
 14/36 Test: VulnDetector.DetectsArrayNoChecks
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.DetectsArrayNoChecks" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"VulnDetector.DetectsArrayNoChecks" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.DetectsArrayNoChecks" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"VulnDetector.DetectsArrayNoChecks" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = VulnDetector.DetectsArrayNoChecks
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -374,18 +374,18 @@ Note: Google Test filter = VulnDetector.DetectsArrayNoChecks
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"VulnDetector.DetectsArrayNoChecks" end time: Jun 18 17:09 CEST
+"VulnDetector.DetectsArrayNoChecks" end time: Jun 18 17:38 CEST
 "VulnDetector.DetectsArrayNoChecks" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 15/36 Testing: VulnDetector.DetectsMemcpy
 15/36 Test: VulnDetector.DetectsMemcpy
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.DetectsMemcpy" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"VulnDetector.DetectsMemcpy" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.DetectsMemcpy" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"VulnDetector.DetectsMemcpy" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = VulnDetector.DetectsMemcpy
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -401,18 +401,18 @@ Note: Google Test filter = VulnDetector.DetectsMemcpy
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"VulnDetector.DetectsMemcpy" end time: Jun 18 17:09 CEST
+"VulnDetector.DetectsMemcpy" end time: Jun 18 17:38 CEST
 "VulnDetector.DetectsMemcpy" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 16/36 Testing: VulnDetector.SkipsNonCppFiles
 16/36 Test: VulnDetector.SkipsNonCppFiles
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.SkipsNonCppFiles" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"VulnDetector.SkipsNonCppFiles" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.SkipsNonCppFiles" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"VulnDetector.SkipsNonCppFiles" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = VulnDetector.SkipsNonCppFiles
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -428,18 +428,18 @@ Note: Google Test filter = VulnDetector.SkipsNonCppFiles
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"VulnDetector.SkipsNonCppFiles" end time: Jun 18 17:09 CEST
+"VulnDetector.SkipsNonCppFiles" end time: Jun 18 17:38 CEST
 "VulnDetector.SkipsNonCppFiles" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 17/36 Testing: VulnDetector.CleanCodeNoFindings
 17/36 Test: VulnDetector.CleanCodeNoFindings
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.CleanCodeNoFindings" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"VulnDetector.CleanCodeNoFindings" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_vuln_detector" "--gtest_filter=VulnDetector.CleanCodeNoFindings" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"VulnDetector.CleanCodeNoFindings" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = VulnDetector.CleanCodeNoFindings
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -455,18 +455,18 @@ Note: Google Test filter = VulnDetector.CleanCodeNoFindings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"VulnDetector.CleanCodeNoFindings" end time: Jun 18 17:09 CEST
+"VulnDetector.CleanCodeNoFindings" end time: Jun 18 17:38 CEST
 "VulnDetector.CleanCodeNoFindings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 18/36 Testing: PortScanner.ScanLocalhostDoesNotCrash
 18/36 Test: PortScanner.ScanLocalhostDoesNotCrash
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanLocalhostDoesNotCrash" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"PortScanner.ScanLocalhostDoesNotCrash" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanLocalhostDoesNotCrash" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"PortScanner.ScanLocalhostDoesNotCrash" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = PortScanner.ScanLocalhostDoesNotCrash
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -482,18 +482,18 @@ Note: Google Test filter = PortScanner.ScanLocalhostDoesNotCrash
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PortScanner.ScanLocalhostDoesNotCrash" end time: Jun 18 17:09 CEST
+"PortScanner.ScanLocalhostDoesNotCrash" end time: Jun 18 17:38 CEST
 "PortScanner.ScanLocalhostDoesNotCrash" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 19/36 Testing: PortScanner.ScanPortListDoesNotCrash
 19/36 Test: PortScanner.ScanPortListDoesNotCrash
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanPortListDoesNotCrash" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"PortScanner.ScanPortListDoesNotCrash" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanPortListDoesNotCrash" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"PortScanner.ScanPortListDoesNotCrash" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = PortScanner.ScanPortListDoesNotCrash
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -509,72 +509,72 @@ Note: Google Test filter = PortScanner.ScanPortListDoesNotCrash
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"PortScanner.ScanPortListDoesNotCrash" end time: Jun 18 17:09 CEST
+"PortScanner.ScanPortListDoesNotCrash" end time: Jun 18 17:38 CEST
 "PortScanner.ScanPortListDoesNotCrash" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 20/36 Testing: PortScanner.ScanInvalidHostReturnsEmpty
 20/36 Test: PortScanner.ScanInvalidHostReturnsEmpty
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanInvalidHostReturnsEmpty" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"PortScanner.ScanInvalidHostReturnsEmpty" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanInvalidHostReturnsEmpty" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"PortScanner.ScanInvalidHostReturnsEmpty" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = PortScanner.ScanInvalidHostReturnsEmpty
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from PortScanner
 [ RUN      ] PortScanner.ScanInvalidHostReturnsEmpty
-[       OK ] PortScanner.ScanInvalidHostReturnsEmpty (7552 ms)
-[----------] 1 test from PortScanner (7552 ms total)
+[       OK ] PortScanner.ScanInvalidHostReturnsEmpty (7699 ms)
+[----------] 1 test from PortScanner (7699 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (7552 ms total)
+[==========] 1 test from 1 test suite ran. (7699 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   7.56 sec
+Test time =   7.70 sec
 ----------------------------------------------------------
 Test Passed.
-"PortScanner.ScanInvalidHostReturnsEmpty" end time: Jun 18 17:09 CEST
+"PortScanner.ScanInvalidHostReturnsEmpty" end time: Jun 18 17:38 CEST
 "PortScanner.ScanInvalidHostReturnsEmpty" time elapsed: 00:00:07
 ----------------------------------------------------------
 
 21/36 Testing: PortScanner.ScanLocalhostPort22
 21/36 Test: PortScanner.ScanLocalhostPort22
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanLocalhostPort22" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"PortScanner.ScanLocalhostPort22" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanLocalhostPort22" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"PortScanner.ScanLocalhostPort22" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = PortScanner.ScanLocalhostPort22
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from PortScanner
 [ RUN      ] PortScanner.ScanLocalhostPort22
-[       OK ] PortScanner.ScanLocalhostPort22 (0 ms)
-[----------] 1 test from PortScanner (0 ms total)
+[       OK ] PortScanner.ScanLocalhostPort22 (1 ms)
+[----------] 1 test from PortScanner (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (0 ms total)
+[==========] 1 test from 1 test suite ran. (1 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"PortScanner.ScanLocalhostPort22" end time: Jun 18 17:09 CEST
+"PortScanner.ScanLocalhostPort22" end time: Jun 18 17:38 CEST
 "PortScanner.ScanLocalhostPort22" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 22/36 Testing: PortScanner.ScanIPv6LoopbackDoesNotCrash
 22/36 Test: PortScanner.ScanIPv6LoopbackDoesNotCrash
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanIPv6LoopbackDoesNotCrash" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"PortScanner.ScanIPv6LoopbackDoesNotCrash" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_port_scanner" "--gtest_filter=PortScanner.ScanIPv6LoopbackDoesNotCrash" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"PortScanner.ScanIPv6LoopbackDoesNotCrash" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = PortScanner.ScanIPv6LoopbackDoesNotCrash
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -587,21 +587,21 @@ Note: Google Test filter = PortScanner.ScanIPv6LoopbackDoesNotCrash
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"PortScanner.ScanIPv6LoopbackDoesNotCrash" end time: Jun 18 17:09 CEST
+"PortScanner.ScanIPv6LoopbackDoesNotCrash" end time: Jun 18 17:38 CEST
 "PortScanner.ScanIPv6LoopbackDoesNotCrash" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 23/36 Testing: ServiceDetector.WellKnownPortNames
 23/36 Test: ServiceDetector.WellKnownPortNames
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_service_detector" "--gtest_filter=ServiceDetector.WellKnownPortNames" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"ServiceDetector.WellKnownPortNames" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_service_detector" "--gtest_filter=ServiceDetector.WellKnownPortNames" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"ServiceDetector.WellKnownPortNames" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = ServiceDetector.WellKnownPortNames
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -614,21 +614,21 @@ Note: Google Test filter = ServiceDetector.WellKnownPortNames
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ServiceDetector.WellKnownPortNames" end time: Jun 18 17:09 CEST
+"ServiceDetector.WellKnownPortNames" end time: Jun 18 17:38 CEST
 "ServiceDetector.WellKnownPortNames" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 24/36 Testing: ServiceDetector.DetectServicesOnEmptyPortList
 24/36 Test: ServiceDetector.DetectServicesOnEmptyPortList
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_service_detector" "--gtest_filter=ServiceDetector.DetectServicesOnEmptyPortList" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"ServiceDetector.DetectServicesOnEmptyPortList" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_service_detector" "--gtest_filter=ServiceDetector.DetectServicesOnEmptyPortList" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"ServiceDetector.DetectServicesOnEmptyPortList" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = ServiceDetector.DetectServicesOnEmptyPortList
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -641,21 +641,21 @@ Note: Google Test filter = ServiceDetector.DetectServicesOnEmptyPortList
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ServiceDetector.DetectServicesOnEmptyPortList" end time: Jun 18 17:09 CEST
+"ServiceDetector.DetectServicesOnEmptyPortList" end time: Jun 18 17:38 CEST
 "ServiceDetector.DetectServicesOnEmptyPortList" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 25/36 Testing: ServiceDetector.DetectServicesDoesNotCrash
 25/36 Test: ServiceDetector.DetectServicesDoesNotCrash
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_service_detector" "--gtest_filter=ServiceDetector.DetectServicesDoesNotCrash" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"ServiceDetector.DetectServicesDoesNotCrash" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_service_detector" "--gtest_filter=ServiceDetector.DetectServicesDoesNotCrash" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"ServiceDetector.DetectServicesDoesNotCrash" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = ServiceDetector.DetectServicesDoesNotCrash
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -668,21 +668,21 @@ Note: Google Test filter = ServiceDetector.DetectServicesDoesNotCrash
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ServiceDetector.DetectServicesDoesNotCrash" end time: Jun 18 17:09 CEST
+"ServiceDetector.DetectServicesDoesNotCrash" end time: Jun 18 17:38 CEST
 "ServiceDetector.DetectServicesDoesNotCrash" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 26/36 Testing: BannerGrabber.GrabClosedPortReturnsNotGrabbed
 26/36 Test: BannerGrabber.GrabClosedPortReturnsNotGrabbed
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_service_detector" "--gtest_filter=BannerGrabber.GrabClosedPortReturnsNotGrabbed" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"BannerGrabber.GrabClosedPortReturnsNotGrabbed" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_service_detector" "--gtest_filter=BannerGrabber.GrabClosedPortReturnsNotGrabbed" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"BannerGrabber.GrabClosedPortReturnsNotGrabbed" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = BannerGrabber.GrabClosedPortReturnsNotGrabbed
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -695,48 +695,48 @@ Note: Google Test filter = BannerGrabber.GrabClosedPortReturnsNotGrabbed
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"BannerGrabber.GrabClosedPortReturnsNotGrabbed" end time: Jun 18 17:09 CEST
+"BannerGrabber.GrabClosedPortReturnsNotGrabbed" end time: Jun 18 17:38 CEST
 "BannerGrabber.GrabClosedPortReturnsNotGrabbed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 27/36 Testing: BannerGrabber.GrabInvalidHostReturnsNotGrabbed
 27/36 Test: BannerGrabber.GrabInvalidHostReturnsNotGrabbed
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_service_detector" "--gtest_filter=BannerGrabber.GrabInvalidHostReturnsNotGrabbed" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"BannerGrabber.GrabInvalidHostReturnsNotGrabbed" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_service_detector" "--gtest_filter=BannerGrabber.GrabInvalidHostReturnsNotGrabbed" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"BannerGrabber.GrabInvalidHostReturnsNotGrabbed" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = BannerGrabber.GrabInvalidHostReturnsNotGrabbed
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from BannerGrabber
 [ RUN      ] BannerGrabber.GrabInvalidHostReturnsNotGrabbed
-[       OK ] BannerGrabber.GrabInvalidHostReturnsNotGrabbed (114 ms)
-[----------] 1 test from BannerGrabber (114 ms total)
+[       OK ] BannerGrabber.GrabInvalidHostReturnsNotGrabbed (37 ms)
+[----------] 1 test from BannerGrabber (37 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (114 ms total)
+[==========] 1 test from 1 test suite ran. (37 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.12 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"BannerGrabber.GrabInvalidHostReturnsNotGrabbed" end time: Jun 18 17:09 CEST
+"BannerGrabber.GrabInvalidHostReturnsNotGrabbed" end time: Jun 18 17:38 CEST
 "BannerGrabber.GrabInvalidHostReturnsNotGrabbed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 28/36 Testing: Integration.ScanAndProduceJsonReport
 28/36 Test: Integration.ScanAndProduceJsonReport
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Integration.ScanAndProduceJsonReport" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Integration.ScanAndProduceJsonReport" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Integration.ScanAndProduceJsonReport" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Integration.ScanAndProduceJsonReport" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Integration.ScanAndProduceJsonReport
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -752,18 +752,18 @@ Note: Google Test filter = Integration.ScanAndProduceJsonReport
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Integration.ScanAndProduceJsonReport" end time: Jun 18 17:09 CEST
+"Integration.ScanAndProduceJsonReport" end time: Jun 18 17:38 CEST
 "Integration.ScanAndProduceJsonReport" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 29/36 Testing: Integration.ScanAndProduceHtmlReport
 29/36 Test: Integration.ScanAndProduceHtmlReport
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Integration.ScanAndProduceHtmlReport" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Integration.ScanAndProduceHtmlReport" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Integration.ScanAndProduceHtmlReport" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Integration.ScanAndProduceHtmlReport" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Integration.ScanAndProduceHtmlReport
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -779,45 +779,45 @@ Note: Google Test filter = Integration.ScanAndProduceHtmlReport
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Integration.ScanAndProduceHtmlReport" end time: Jun 18 17:09 CEST
+"Integration.ScanAndProduceHtmlReport" end time: Jun 18 17:38 CEST
 "Integration.ScanAndProduceHtmlReport" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 30/36 Testing: Integration.ScanAndProduceMarkdownReport
 30/36 Test: Integration.ScanAndProduceMarkdownReport
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Integration.ScanAndProduceMarkdownReport" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Integration.ScanAndProduceMarkdownReport" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Integration.ScanAndProduceMarkdownReport" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Integration.ScanAndProduceMarkdownReport" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Integration.ScanAndProduceMarkdownReport
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 1 test from Integration
 [ RUN      ] Integration.ScanAndProduceMarkdownReport
-[       OK ] Integration.ScanAndProduceMarkdownReport (1 ms)
-[----------] 1 test from Integration (1 ms total)
+[       OK ] Integration.ScanAndProduceMarkdownReport (2 ms)
+[----------] 1 test from Integration (2 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (1 ms total)
+[==========] 1 test from 1 test suite ran. (2 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Integration.ScanAndProduceMarkdownReport" end time: Jun 18 17:09 CEST
+"Integration.ScanAndProduceMarkdownReport" end time: Jun 18 17:38 CEST
 "Integration.ScanAndProduceMarkdownReport" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 31/36 Testing: Cvss31.KnownVector_9_8
 31/36 Test: Cvss31.KnownVector_9_8
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.KnownVector_9_8" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Cvss31.KnownVector_9_8" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.KnownVector_9_8" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Cvss31.KnownVector_9_8" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Cvss31.KnownVector_9_8
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -830,21 +830,21 @@ Note: Google Test filter = Cvss31.KnownVector_9_8
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Cvss31.KnownVector_9_8" end time: Jun 18 17:09 CEST
+"Cvss31.KnownVector_9_8" end time: Jun 18 17:38 CEST
 "Cvss31.KnownVector_9_8" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 32/36 Testing: Cvss31.ParseVectorString
 32/36 Test: Cvss31.ParseVectorString
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.ParseVectorString" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Cvss31.ParseVectorString" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.ParseVectorString" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Cvss31.ParseVectorString" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Cvss31.ParseVectorString
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -857,21 +857,21 @@ Note: Google Test filter = Cvss31.ParseVectorString
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Cvss31.ParseVectorString" end time: Jun 18 17:09 CEST
+"Cvss31.ParseVectorString" end time: Jun 18 17:38 CEST
 "Cvss31.ParseVectorString" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 33/36 Testing: Cvss31.CvssForInjectionCategory
 33/36 Test: Cvss31.CvssForInjectionCategory
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.CvssForInjectionCategory" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Cvss31.CvssForInjectionCategory" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.CvssForInjectionCategory" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Cvss31.CvssForInjectionCategory" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Cvss31.CvssForInjectionCategory
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -887,18 +887,18 @@ Note: Google Test filter = Cvss31.CvssForInjectionCategory
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Cvss31.CvssForInjectionCategory" end time: Jun 18 17:09 CEST
+"Cvss31.CvssForInjectionCategory" end time: Jun 18 17:38 CEST
 "Cvss31.CvssForInjectionCategory" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 34/36 Testing: Cvss31.CvssForCryptoCategory
 34/36 Test: Cvss31.CvssForCryptoCategory
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.CvssForCryptoCategory" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Cvss31.CvssForCryptoCategory" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Cvss31.CvssForCryptoCategory" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Cvss31.CvssForCryptoCategory" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Cvss31.CvssForCryptoCategory
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -911,21 +911,21 @@ Note: Google Test filter = Cvss31.CvssForCryptoCategory
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"Cvss31.CvssForCryptoCategory" end time: Jun 18 17:09 CEST
+"Cvss31.CvssForCryptoCategory" end time: Jun 18 17:38 CEST
 "Cvss31.CvssForCryptoCategory" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 35/36 Testing: Metrics.ComputesSecurityScore
 35/36 Test: Metrics.ComputesSecurityScore
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Metrics.ComputesSecurityScore" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Metrics.ComputesSecurityScore" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Metrics.ComputesSecurityScore" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Metrics.ComputesSecurityScore" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Metrics.ComputesSecurityScore
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -941,18 +941,18 @@ Note: Google Test filter = Metrics.ComputesSecurityScore
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Metrics.ComputesSecurityScore" end time: Jun 18 17:09 CEST
+"Metrics.ComputesSecurityScore" end time: Jun 18 17:38 CEST
 "Metrics.ComputesSecurityScore" time elapsed: 00:00:00
 ----------------------------------------------------------
 
 36/36 Testing: Metrics.EmptyFindingsMaxScore
 36/36 Test: Metrics.EmptyFindingsMaxScore
-Command: "/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration" "--gtest_filter=Metrics.EmptyFindingsMaxScore" "--gtest_also_run_disabled_tests"
-Directory: /home/mangabigab/EPITECH/hub/EpiScan/build/tests
-"Metrics.EmptyFindingsMaxScore" start time: Jun 18 17:09 CEST
+Command: "/home/axel/EpiScan/build/tests/test_integration" "--gtest_filter=Metrics.EmptyFindingsMaxScore" "--gtest_also_run_disabled_tests"
+Directory: /home/axel/EpiScan/build/tests
+"Metrics.EmptyFindingsMaxScore" start time: Jun 18 17:38 CEST
 Output:
 ----------------------------------------------------------
-Running main() from /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Running main() from /home/axel/EpiScan/build/_deps/googletest-src/googletest/src/gtest_main.cc
 Note: Google Test filter = Metrics.EmptyFindingsMaxScore
 [==========] Running 1 test from 1 test suite.
 [----------] Global test environment set-up.
@@ -968,8 +968,8 @@ Note: Google Test filter = Metrics.EmptyFindingsMaxScore
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Metrics.EmptyFindingsMaxScore" end time: Jun 18 17:09 CEST
+"Metrics.EmptyFindingsMaxScore" end time: Jun 18 17:38 CEST
 "Metrics.EmptyFindingsMaxScore" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jun 18 17:09 CEST
+End testing: Jun 18 17:38 CEST

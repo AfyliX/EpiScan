@@ -3,9 +3,9 @@
 # No other meaning or use of this file is supported.
 
 method=git
-command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/tmp/nlohmann_json-populate-gitclone.cmake
-source_dir=/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src
-work_dir=/home/mangabigab/EPITECH/hub/EpiScan/build/_deps
+command=/usr/bin/cmake;-DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE;-P;/home/axel/EpiScan/build/_deps/nlohmann_json-subbuild/nlohmann_json-populate-prefix/tmp/nlohmann_json-populate-gitclone.cmake
+source_dir=/home/axel/EpiScan/build/_deps/nlohmann_json-src
+work_dir=/home/axel/EpiScan/build/_deps
 repository=https://github.com/nlohmann/json.git
 remote=origin
 init_submodules=TRUE

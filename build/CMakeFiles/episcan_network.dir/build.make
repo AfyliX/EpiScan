@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mangabigab/EPITECH/hub/EpiScan
+CMAKE_SOURCE_DIR = /home/axel/EpiScan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mangabigab/EPITECH/hub/EpiScan/build
+CMAKE_BINARY_DIR = /home/axel/EpiScan/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/episcan_network.dir/depend.make
@@ -73,67 +73,82 @@ CMakeFiles/episcan_network.dir/codegen:
 .PHONY : CMakeFiles/episcan_network.dir/codegen
 
 CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o: CMakeFiles/episcan_network.dir/flags.make
-CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o: /home/mangabigab/EPITECH/hub/EpiScan/src/network/PortScanner.cpp
+CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o: /home/axel/EpiScan/src/network/PortScanner.cpp
 CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o: CMakeFiles/episcan_network.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o -c /home/mangabigab/EPITECH/hub/EpiScan/src/network/PortScanner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o -c /home/axel/EpiScan/src/network/PortScanner.cpp
 
 CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mangabigab/EPITECH/hub/EpiScan/src/network/PortScanner.cpp > CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/src/network/PortScanner.cpp > CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.i
 
 CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mangabigab/EPITECH/hub/EpiScan/src/network/PortScanner.cpp -o CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/src/network/PortScanner.cpp -o CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.s
 
 CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o: CMakeFiles/episcan_network.dir/flags.make
-CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o: /home/mangabigab/EPITECH/hub/EpiScan/src/network/BannerGrabber.cpp
+CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o: /home/axel/EpiScan/src/network/BannerGrabber.cpp
 CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o: CMakeFiles/episcan_network.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o -c /home/mangabigab/EPITECH/hub/EpiScan/src/network/BannerGrabber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o -c /home/axel/EpiScan/src/network/BannerGrabber.cpp
 
 CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mangabigab/EPITECH/hub/EpiScan/src/network/BannerGrabber.cpp > CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/src/network/BannerGrabber.cpp > CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.i
 
 CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mangabigab/EPITECH/hub/EpiScan/src/network/BannerGrabber.cpp -o CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/src/network/BannerGrabber.cpp -o CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.s
 
 CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o: CMakeFiles/episcan_network.dir/flags.make
-CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o: /home/mangabigab/EPITECH/hub/EpiScan/src/network/ServiceDetector.cpp
+CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o: /home/axel/EpiScan/src/network/ServiceDetector.cpp
 CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o: CMakeFiles/episcan_network.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o -c /home/mangabigab/EPITECH/hub/EpiScan/src/network/ServiceDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o -c /home/axel/EpiScan/src/network/ServiceDetector.cpp
 
 CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mangabigab/EPITECH/hub/EpiScan/src/network/ServiceDetector.cpp > CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/src/network/ServiceDetector.cpp > CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.i
 
 CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mangabigab/EPITECH/hub/EpiScan/src/network/ServiceDetector.cpp -o CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/src/network/ServiceDetector.cpp -o CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.s
 
 CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: CMakeFiles/episcan_network.dir/flags.make
-CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: /home/mangabigab/EPITECH/hub/EpiScan/src/network/NetworkvulAnalyzer.cpp
+CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: /home/axel/EpiScan/src/network/NetworkvulAnalyzer.cpp
 CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o: CMakeFiles/episcan_network.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o -c /home/mangabigab/EPITECH/hub/EpiScan/src/network/NetworkvulAnalyzer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o -c /home/axel/EpiScan/src/network/NetworkvulAnalyzer.cpp
 
 CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mangabigab/EPITECH/hub/EpiScan/src/network/NetworkvulAnalyzer.cpp > CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/src/network/NetworkvulAnalyzer.cpp > CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.i
 
 CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mangabigab/EPITECH/hub/EpiScan/src/network/NetworkvulAnalyzer.cpp -o CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/src/network/NetworkvulAnalyzer.cpp -o CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.s
+
+CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o: CMakeFiles/episcan_network.dir/flags.make
+CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o: /home/axel/EpiScan/src/network/CveLookup.cpp
+CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o: CMakeFiles/episcan_network.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o -MF CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o.d -o CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o -c /home/axel/EpiScan/src/network/CveLookup.cpp
+
+CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/src/network/CveLookup.cpp > CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.i
+
+CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/src/network/CveLookup.cpp -o CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.s
 
 # Object files for target episcan_network
 episcan_network_OBJECTS = \
 "CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o" \
 "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o" \
 "CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o" \
-"CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o"
+"CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o" \
+"CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o"
 
 # External object files for target episcan_network
 episcan_network_EXTERNAL_OBJECTS =
@@ -142,9 +157,10 @@ libepiscan_network.a: CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp
 libepiscan_network.a: CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o
 libepiscan_network.a: CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o
 libepiscan_network.a: CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o
+libepiscan_network.a: CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o
 libepiscan_network.a: CMakeFiles/episcan_network.dir/build.make
 libepiscan_network.a: CMakeFiles/episcan_network.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libepiscan_network.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libepiscan_network.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/episcan_network.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/episcan_network.dir/link.txt --verbose=$(VERBOSE)
 
@@ -157,6 +173,6 @@ CMakeFiles/episcan_network.dir/clean:
 .PHONY : CMakeFiles/episcan_network.dir/clean
 
 CMakeFiles/episcan_network.dir/depend:
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mangabigab/EPITECH/hub/EpiScan /home/mangabigab/EPITECH/hub/EpiScan /home/mangabigab/EPITECH/hub/EpiScan/build /home/mangabigab/EPITECH/hub/EpiScan/build /home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles/episcan_network.dir/DependInfo.cmake "--color=$(COLOR)" episcan_network
+	cd /home/axel/EpiScan/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/EpiScan /home/axel/EpiScan /home/axel/EpiScan/build /home/axel/EpiScan/build /home/axel/EpiScan/build/CMakeFiles/episcan_network.dir/DependInfo.cmake "--color=$(COLOR)" episcan_network
 .PHONY : CMakeFiles/episcan_network.dir/depend
 

@@ -8,27 +8,27 @@
       "testsuite": [
         {
           "name": "ScanLocalhostDoesNotCrash",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_port_scanner.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_port_scanner.cpp",
           "line": 7
         },
         {
           "name": "ScanPortListDoesNotCrash",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_port_scanner.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_port_scanner.cpp",
           "line": 22
         },
         {
           "name": "ScanInvalidHostReturnsEmpty",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_port_scanner.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_port_scanner.cpp",
           "line": 31
         },
         {
           "name": "ScanLocalhostPort22",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_port_scanner.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_port_scanner.cpp",
           "line": 38
         },
         {
           "name": "ScanIPv6LoopbackDoesNotCrash",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_port_scanner.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_port_scanner.cpp",
           "line": 46
         }
       ]

@@ -20,55 +20,28 @@ events:
     names:
       - "uname"
     candidate_directories:
-      - "/usr/lib/ccache/bin/"
-      - "/home/mangabigab/.cargo/bin/"
-      - "/home/mangabigab/.local/bin/"
-      - "/usr/local/sbin/"
+      - "/home/axel/.local/bin/"
       - "/usr/local/bin/"
       - "/usr/bin/"
+      - "/bin/"
+      - "/usr/local/sbin/"
       - "/usr/bin/site_perl/"
       - "/usr/bin/vendor_perl/"
       - "/usr/bin/core_perl/"
-      - "/home/mangabigab/.claude/plugins/cache/claude-plugins-official/clangd-lsp/1.0.0/bin/"
-      - "/bin/"
     searched_directories:
-      - "/usr/lib/ccache/bin/uname"
-      - "/home/mangabigab/.cargo/bin/uname"
-      - "/home/mangabigab/.local/bin/uname"
-      - "/usr/local/sbin/uname"
+      - "/home/axel/.local/bin/uname"
       - "/usr/local/bin/uname"
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
-        - "/usr/lib/ccache/bin/"
-        - "/home/mangabigab/.cargo/bin/"
-        - "/home/mangabigab/.local/bin/"
-        - "/home/mangabigab/.cargo/bin"
-        - "/home/mangabigab/.local/bin"
-        - "/home/mangabigab/.cargo/bin"
-        - "/home/mangabigab/.local/bin"
-        - "/home/mangabigab/.cargo/bin"
-        - "/home/mangabigab/.local/bin"
-        - "/home/mangabigab/.cargo/bin"
-        - "/home/mangabigab/.local/bin"
-        - "/usr/local/sbin"
+        - "/home/axel/.local/bin"
         - "/usr/local/bin"
         - "/usr/bin"
+        - "/bin"
+        - "/usr/local/sbin"
         - "/usr/bin/site_perl"
         - "/usr/bin/vendor_perl"
         - "/usr/bin/core_perl"
-        - "/home/mangabigab/.claude/plugins/cache/claude-plugins-official/clangd-lsp/1.0.0/bin"
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:16 (project)"
-    message: |
-      The system is: Linux - 7.0.12-1-cachyos - x86_64
-...
-
----
-events:
   -
     kind: "message-v1"
     backtrace:

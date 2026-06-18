@@ -1,9 +1,8 @@
 CMakeFiles/episcan_core.dir/src/core/Report.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/core/Report.cpp \
- /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Report.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Vulnerability.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Severity.hpp \
+ /home/axel/EpiScan/src/core/Report.cpp /usr/include/stdc-predef.h \
+ /home/axel/EpiScan/include/core/Report.hpp \
+ /home/axel/EpiScan/include/core/Vulnerability.hpp \
+ /home/axel/EpiScan/include/core/Severity.hpp \
  /usr/include/c++/16.1.1/string \
  /usr/include/c++/16.1.1/bits/requires_hosted.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -189,7 +188,7 @@ CMakeFiles/episcan_core.dir/src/core/Report.cpp.o: \
  /usr/include/c++/16.1.1/bits/stl_vector.h \
  /usr/include/c++/16.1.1/bits/stl_bvector.h \
  /usr/include/c++/16.1.1/bits/vector.tcc \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/json.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/json.hpp \
  /usr/include/c++/16.1.1/algorithm \
  /usr/include/c++/16.1.1/bits/stl_algo.h \
  /usr/include/c++/16.1.1/bits/algorithmfwd.h \
@@ -218,9 +217,9 @@ CMakeFiles/episcan_core.dir/src/core/Report.cpp.o: \
  /usr/include/c++/16.1.1/pstl/glue_memory_defs.h \
  /usr/include/c++/16.1.1/utility \
  /usr/include/c++/16.1.1/bits/stl_relops.h \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/adl_serializer.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/abi_macros.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/from_json.hpp \
  /usr/include/c++/16.1.1/forward_list \
  /usr/include/c++/16.1.1/bits/forward_list.h \
  /usr/include/c++/16.1.1/bits/forward_list.tcc \
@@ -256,55 +255,55 @@ CMakeFiles/episcan_core.dir/src/core/Report.cpp.o: \
  /usr/include/c++/16.1.1/bits/gslice_array.h \
  /usr/include/c++/16.1.1/bits/mask_array.h \
  /usr/include/c++/16.1.1/bits/indirect_array.h \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/exceptions.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/value_t.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_scope.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/detected.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/void_t.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley.hpp \
  /usr/include/c++/16.1.1/version /usr/include/c++/16.1.1/cassert \
  /usr/include/assert.h \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_escape.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/position_t.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/cpp_future.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/type_traits.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iterator_traits.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/begin.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/call_std/end.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/json_fwd.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/string_concat.hpp \
  /usr/include/c++/16.1.1/cstring /usr/include/string.h \
  /usr/include/strings.h \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/identity_tag.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/std_fs.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_json.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iteration_proxy.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/byte_container_with_subtype.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/hash.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/binary_reader.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/input_adapters.hpp \
  /usr/include/c++/16.1.1/numeric \
  /usr/include/c++/16.1.1/bits/stl_numeric.h \
  /usr/include/c++/16.1.1/pstl/glue_numeric_defs.h \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/json_sax.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/lexer.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/meta/is_sax.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/input/parser.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/internal_iterator.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/primitive_iterator.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/iter_impl.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/iterators/json_reverse_iterator.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_custom_base_class.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_pointer.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/json_ref.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/binary_writer.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/output_adapters.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/output/serializer.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/conversions/to_chars.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/ordered_map.hpp \
  /usr/include/c++/16.1.1/any \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/detail/macro_unscope.hpp \
+ /home/axel/EpiScan/build/_deps/nlohmann_json-src/include/nlohmann/thirdparty/hedley/hedley_undef.hpp \
  /usr/include/c++/16.1.1/fstream \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++io.h \

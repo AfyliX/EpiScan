@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/nlohmann_json-subbuild/cmake_install.cmake"
+		"/home/axel/EpiScan/build/_deps/nlohmann_json-subbuild/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

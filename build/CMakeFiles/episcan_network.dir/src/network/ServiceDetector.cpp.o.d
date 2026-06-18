@@ -1,8 +1,8 @@
 CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/network/ServiceDetector.cpp \
+ /home/axel/EpiScan/src/network/ServiceDetector.cpp \
  /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/ServiceDetector.hpp \
- /home/mangabigab/EPITECH/hub/EpiScan/include/network/BannerGrabber.hpp \
+ /home/axel/EpiScan/include/network/ServiceDetector.hpp \
+ /home/axel/EpiScan/include/network/BannerGrabber.hpp \
  /usr/include/c++/16.1.1/cstdint \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

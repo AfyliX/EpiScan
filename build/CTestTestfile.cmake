@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/mangabigab/EPITECH/hub/EpiScan
-# Build directory: /home/mangabigab/EPITECH/hub/EpiScan/build
+# Source directory: /home/axel/EpiScan
+# Build directory: /home/axel/EpiScan/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

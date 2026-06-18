@@ -8,17 +8,17 @@
       "testsuite": [
         {
           "name": "WellKnownPortNames",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_service_detector.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_service_detector.cpp",
           "line": 5
         },
         {
           "name": "DetectServicesOnEmptyPortList",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_service_detector.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_service_detector.cpp",
           "line": 16
         },
         {
           "name": "DetectServicesDoesNotCrash",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_service_detector.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_service_detector.cpp",
           "line": 22
         }
       ]
@@ -29,12 +29,12 @@
       "testsuite": [
         {
           "name": "GrabClosedPortReturnsNotGrabbed",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_service_detector.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_service_detector.cpp",
           "line": 32
         },
         {
           "name": "GrabInvalidHostReturnsNotGrabbed",
-          "file": "\/home\/mangabigab\/EPITECH\/hub\/EpiScan\/tests\/test_service_detector.cpp",
+          "file": "\/home\/axel\/EpiScan\/tests\/test_service_detector.cpp",
           "line": 39
         }
       ]

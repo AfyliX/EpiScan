@@ -8,10 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mangabigab/EPITECH/hub/EpiScan/src/network/BannerGrabber.cpp" "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o.d"
-  "/home/mangabigab/EPITECH/hub/EpiScan/src/network/NetworkvulAnalyzer.cpp" "CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o.d"
-  "/home/mangabigab/EPITECH/hub/EpiScan/src/network/PortScanner.cpp" "CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o.d"
-  "/home/mangabigab/EPITECH/hub/EpiScan/src/network/ServiceDetector.cpp" "CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o.d"
+  "/home/axel/EpiScan/src/network/BannerGrabber.cpp" "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/BannerGrabber.cpp.o.d"
+  "/home/axel/EpiScan/src/network/CveLookup.cpp" "CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/CveLookup.cpp.o.d"
+  "/home/axel/EpiScan/src/network/NetworkvulAnalyzer.cpp" "CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/NetworkvulAnalyzer.cpp.o.d"
+  "/home/axel/EpiScan/src/network/PortScanner.cpp" "CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/PortScanner.cpp.o.d"
+  "/home/axel/EpiScan/src/network/ServiceDetector.cpp" "CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o" "gcc" "CMakeFiles/episcan_network.dir/src/network/ServiceDetector.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

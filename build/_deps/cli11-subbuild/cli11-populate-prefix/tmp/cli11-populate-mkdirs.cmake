@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-src")
-  file(MAKE_DIRECTORY "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-src")
+if(NOT EXISTS "/home/axel/EpiScan/build/_deps/cli11-src")
+  file(MAKE_DIRECTORY "/home/axel/EpiScan/build/_deps/cli11-src")
 endif()
 file(MAKE_DIRECTORY
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-build"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/tmp"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src"
-  "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp"
+  "/home/axel/EpiScan/build/_deps/cli11-build"
+  "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix"
+  "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/tmp"
+  "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp"
+  "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src"
+  "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/mangabigab/EPITECH/hub/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/axel/EpiScan/build/_deps/cli11-subbuild/cli11-populate-prefix/src/cli11-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mangabigab/EPITECH/hub/EpiScan
+CMAKE_SOURCE_DIR = /home/axel/EpiScan
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mangabigab/EPITECH/hub/EpiScan/build
+CMAKE_BINARY_DIR = /home/axel/EpiScan/build
 
 # Include any dependencies generated for this target.
 include tests/CMakeFiles/test_integration.dir/depend.make
@@ -73,18 +73,18 @@ tests/CMakeFiles/test_integration.dir/codegen:
 .PHONY : tests/CMakeFiles/test_integration.dir/codegen
 
 tests/CMakeFiles/test_integration.dir/test_integration.cpp.o: tests/CMakeFiles/test_integration.dir/flags.make
-tests/CMakeFiles/test_integration.dir/test_integration.cpp.o: /home/mangabigab/EPITECH/hub/EpiScan/tests/test_integration.cpp
+tests/CMakeFiles/test_integration.dir/test_integration.cpp.o: /home/axel/EpiScan/tests/test_integration.cpp
 tests/CMakeFiles/test_integration.dir/test_integration.cpp.o: tests/CMakeFiles/test_integration.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/test_integration.dir/test_integration.cpp.o"
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_integration.dir/test_integration.cpp.o -MF CMakeFiles/test_integration.dir/test_integration.cpp.o.d -o CMakeFiles/test_integration.dir/test_integration.cpp.o -c /home/mangabigab/EPITECH/hub/EpiScan/tests/test_integration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tests/CMakeFiles/test_integration.dir/test_integration.cpp.o"
+	cd /home/axel/EpiScan/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/test_integration.dir/test_integration.cpp.o -MF CMakeFiles/test_integration.dir/test_integration.cpp.o.d -o CMakeFiles/test_integration.dir/test_integration.cpp.o -c /home/axel/EpiScan/tests/test_integration.cpp
 
 tests/CMakeFiles/test_integration.dir/test_integration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_integration.dir/test_integration.cpp.i"
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mangabigab/EPITECH/hub/EpiScan/tests/test_integration.cpp > CMakeFiles/test_integration.dir/test_integration.cpp.i
+	cd /home/axel/EpiScan/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/axel/EpiScan/tests/test_integration.cpp > CMakeFiles/test_integration.dir/test_integration.cpp.i
 
 tests/CMakeFiles/test_integration.dir/test_integration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_integration.dir/test_integration.cpp.s"
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mangabigab/EPITECH/hub/EpiScan/tests/test_integration.cpp -o CMakeFiles/test_integration.dir/test_integration.cpp.s
+	cd /home/axel/EpiScan/build/tests && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/axel/EpiScan/tests/test_integration.cpp -o CMakeFiles/test_integration.dir/test_integration.cpp.s
 
 # Object files for target test_integration
 test_integration_OBJECTS = \
@@ -99,23 +99,25 @@ tests/test_integration: tests/CMakeFiles/test_integration.dir/compiler_depend.ts
 tests/test_integration: libepiscan_core.a
 tests/test_integration: libepiscan_network.a
 tests/test_integration: lib/libgtest_main.a
+tests/test_integration: /usr/lib/libcurl.so
+tests/test_integration: /usr/lib/libcurl.so
 tests/test_integration: /usr/lib/libssl.so
 tests/test_integration: /usr/lib/libcrypto.so
 tests/test_integration: lib/libgtest.a
 tests/test_integration: tests/CMakeFiles/test_integration.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/mangabigab/EPITECH/hub/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_integration"
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_integration.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build/tests && /usr/bin/cmake -D TEST_TARGET=test_integration -D TEST_EXECUTABLE=/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/mangabigab/EPITECH/hub/EpiScan/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_integration_TESTS -D CTEST_FILE=/home/mangabigab/EPITECH/hub/EpiScan/build/tests/test_integration[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake/Modules/GoogleTestAddTests.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/axel/EpiScan/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_integration"
+	cd /home/axel/EpiScan/build/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_integration.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/axel/EpiScan/build/tests && /usr/bin/cmake -D TEST_TARGET=test_integration -D TEST_EXECUTABLE=/home/axel/EpiScan/build/tests/test_integration -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/axel/EpiScan/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=test_integration_TESTS -D CTEST_FILE=/home/axel/EpiScan/build/tests/test_integration[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake/Modules/GoogleTestAddTests.cmake
 
 # Rule to build all files generated by this target.
 tests/CMakeFiles/test_integration.dir/build: tests/test_integration
 .PHONY : tests/CMakeFiles/test_integration.dir/build
 
 tests/CMakeFiles/test_integration.dir/clean:
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/test_integration.dir/cmake_clean.cmake
+	cd /home/axel/EpiScan/build/tests && $(CMAKE_COMMAND) -P CMakeFiles/test_integration.dir/cmake_clean.cmake
 .PHONY : tests/CMakeFiles/test_integration.dir/clean
 
 tests/CMakeFiles/test_integration.dir/depend:
-	cd /home/mangabigab/EPITECH/hub/EpiScan/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/mangabigab/EPITECH/hub/EpiScan /home/mangabigab/EPITECH/hub/EpiScan/tests /home/mangabigab/EPITECH/hub/EpiScan/build /home/mangabigab/EPITECH/hub/EpiScan/build/tests /home/mangabigab/EPITECH/hub/EpiScan/build/tests/CMakeFiles/test_integration.dir/DependInfo.cmake "--color=$(COLOR)" test_integration
+	cd /home/axel/EpiScan/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/axel/EpiScan /home/axel/EpiScan/tests /home/axel/EpiScan/build /home/axel/EpiScan/build/tests /home/axel/EpiScan/build/tests/CMakeFiles/test_integration.dir/DependInfo.cmake "--color=$(COLOR)" test_integration
 .PHONY : tests/CMakeFiles/test_integration.dir/depend
 

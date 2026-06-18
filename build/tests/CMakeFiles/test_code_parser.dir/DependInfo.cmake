@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/mangabigab/EPITECH/hub/EpiScan/tests/test_code_parser.cpp" "tests/CMakeFiles/test_code_parser.dir/test_code_parser.cpp.o" "gcc" "tests/CMakeFiles/test_code_parser.dir/test_code_parser.cpp.o.d"
+  "/home/axel/EpiScan/tests/test_code_parser.cpp" "tests/CMakeFiles/test_code_parser.dir/test_code_parser.cpp.o" "gcc" "tests/CMakeFiles/test_code_parser.dir/test_code_parser.cpp.o.d"
   "" "tests/test_code_parser" "gcc" "tests/CMakeFiles/test_code_parser.dir/link.d"
   )
 

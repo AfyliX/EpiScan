@@ -107,11 +107,20 @@ else()
     message(WARNING "libcurl not found: live NVD CVE lookup will be unavailable (offline signature checks still work).")
 endif()
 
-# Boost.Asio (#71) — header-only for our usage (resolver/socket/steady_timer);
-# only Boost.System needs linking, and it's header-only since Boost 1.69+.
-find_package(Boost 1.70 REQUIRED)
-target_link_libraries(episcan_network PUBLIC Boost::boost)
-target_compile_definitions(episcan_network PUBLIC BOOST_ASIO_NO_DEPRECATED)
+# Standalone Asio (#71) — header-only for our usage (resolver/socket/steady_timer).
+# We use the standalone edition (ASIO_STANDALONE) so there is no Boost dependency;
+# the API is identical to Boost.Asio but uses std::error_code throughout.
+FetchContent_Declare(
+    asio
+    GIT_REPOSITORY https://github.com/chriskohlhoff/asio.git
+    GIT_TAG        asio-1-30-2
+    GIT_SHALLOW    TRUE
+)
+FetchContent_MakeAvailable(asio)
+add_library(asio_standalone INTERFACE)
+target_include_directories(asio_standalone INTERFACE ${asio_SOURCE_DIR}/asio/include)
+target_compile_definitions(asio_standalone INTERFACE ASIO_STANDALONE ASIO_NO_DEPRECATED)
+target_link_libraries(episcan_network PUBLIC asio_standalone)
 
 find_package(OpenSSL QUIET)
 if(OpenSSL_FOUND)
@@ -181,7 +190,7 @@ else()
 	add_executable(episcan
 		src/cli_main.cpp
 	)
-	target_link_libraries(episcan PRIVATE episcan_core)
+	target_link_libraries(episcan PRIVATE episcan_core episcan_network CLI11::CLI11)
 endif()
 
 # ── Tests ─────────────────────────────────────────────────────────────────────

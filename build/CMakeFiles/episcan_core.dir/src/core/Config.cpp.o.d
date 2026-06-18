@@ -1,7 +1,6 @@
 CMakeFiles/episcan_core.dir/src/core/Config.cpp.o: \
- /home/mangabigab/EPITECH/hub/EpiScan/src/core/Config.cpp \
- /usr/include/stdc-predef.h \
- /home/mangabigab/EPITECH/hub/EpiScan/include/core/Config.hpp \
+ /home/axel/EpiScan/src/core/Config.cpp /usr/include/stdc-predef.h \
+ /home/axel/EpiScan/include/core/Config.hpp \
  /usr/include/c++/16.1.1/cstddef \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \

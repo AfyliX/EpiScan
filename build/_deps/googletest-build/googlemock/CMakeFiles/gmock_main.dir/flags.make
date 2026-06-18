@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googlemock/include -isystem /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googlemock -isystem /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest/include -isystem /home/mangabigab/EPITECH/hub/EpiScan/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -isystem /home/axel/EpiScan/build/_deps/googletest-src/googlemock/include -isystem /home/axel/EpiScan/build/_deps/googletest-src/googlemock -isystem /home/axel/EpiScan/build/_deps/googletest-src/googletest/include -isystem /home/axel/EpiScan/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = -O3 -DNDEBUG -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
 
